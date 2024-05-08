@@ -1,0 +1,6 @@
+.home {
+  padding: 0px 60px;
+  padding-top: 20px;
+  width: var(--container-width);
+  margin: 0 auto;
+}
