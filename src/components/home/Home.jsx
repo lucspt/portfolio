@@ -3,39 +3,54 @@ import { InteractiveText } from "../common/InteractiveText";
 import { GithubLink } from "../common/GithubLink";
 import { EmailLink } from "../common/EmailLink";
 import { useState } from "react";
+import { Projects } from "./Projects";
+import { FullWidthSection } from "./FullWidthSection";
+import { BorderContainedSection } from "./BorderContainedSection";
+import { Languages } from "./Languages";
 
-let _linksRendered = false;
+let _contentRendered = false;
 export const Home = () => {
   const [introFinished, setIntroFinished] = useState(false);
-  const [linksRendered, setLinksRendered] = useState(_linksRendered);
-  const introDelay = .8;
+  const [contentRendered, setContentRendered] = useState(_contentRendered);
+
   return (
     <div className="home">
-      <div className="intro">
-        <p>Hi,</p>
-        <InteractiveText text="I'm Luca Caputo" delay={introDelay}/>
+      <BorderContainedSection className="intro home-section" borderTop={false}>
+        <span>Hi, </span>
+        <InteractiveText text="I'm Luca Caputo" order={1} />
         <InteractiveText
           text="Make yourself at home!"
           order={2}
           block
-          delay={introDelay}
           onAnimationEnd={() => {
             setIntroFinished(true);
           }}
         />
-      </div>
-      {introFinished && (
-        <div
-          className={linksRendered ? "" : "fade-in"}
-          onAnimationEnd={() => {
-            _linksRendered = true;
-            setLinksRendered(true);
-          }}
-        >
-          <GithubLink />
-          <EmailLink />
+      </BorderContainedSection>
+      <FullWidthSection className="cliffhanger">
+        <div className="spacing">
+          <p>
+            I'm a software engineer who likes turning ideas into reality,
+            especially to 
+            <br />
+            help the world. I also love the environment.
+          </p>
         </div>
-      )}
+      </FullWidthSection>
+      <Projects />
+      <div
+        className={contentRendered ? "" : "fade-in"}
+        onAnimationEnd={() => {
+          _contentRendered = true;
+          setContentRendered(true);
+        }}
+      ></div>
+      <Languages />
+      <FullWidthSection className="media-links" containWidth bordered={false}>
+        <GithubLink />
+        <EmailLink />
+      </FullWidthSection>
+      <div className="scroll-padding-bottom container-border" />
     </div>
   );
 };

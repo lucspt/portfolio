@@ -5,6 +5,7 @@ export const Nav = () => {
 
   return (
     <nav className="nav-main">
+      <div className="borders" />
       <div className="link-container">
         <div className="nav-link">
           <Link to="/">Projects</Link>

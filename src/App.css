@@ -1,9 +1,19 @@
+@media screen and (max-width: 1381px) {
+  :root {
+    --container-border: none !important;
+  }
+}
+
 :root {
   --color-background: #121212;
   --color-black-deep: #0b0b0b;
+  --color-grey-secondary: #383434;
   --color-white: #fff;
   --font-size: 17px;
   --container-width: 1380px;
+  --font-large: 1.3em;
+  --font-bold-1: 900;
+  --container-border: dashed 1px #383434;
 }
 
 *, *::before, *::after {
@@ -16,7 +26,7 @@ a {
   color: inherit;
 }
 
-body, html {
+body, html, #root {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -25,6 +35,14 @@ body, html {
   color: var(--color-white);
   font-family: monospace, sans-serif;
   font-size: var(--font-size);
+}
+
+.root {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 90px 1fr;
+  grid-template-columns: 1fr;
 }
 
 .fade-in {
