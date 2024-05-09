@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";
-import { Languages } from "./Languages";
+import { Tools } from "./Tools";
 
 let _contentRendered = false;
 export const Home = () => {
@@ -28,14 +28,12 @@ export const Home = () => {
         />
       </BorderContainedSection>
       <FullWidthSection className="cliffhanger">
-        <div className="spacing">
-          <p>
+        <h2>
+          <span>
             I'm a software engineer who likes turning ideas into reality,
-            especially to 
-            <br />
-            help the world. I also love the environment.
-          </p>
-        </div>
+            especially to help the world. I also love the environment.
+          </span>
+        </h2>
       </FullWidthSection>
       <Projects />
       <div
@@ -45,8 +43,8 @@ export const Home = () => {
           setContentRendered(true);
         }}
       ></div>
-      <Languages />
-      <FullWidthSection className="media-links" containWidth bordered={false}>
+      <Tools />
+      <FullWidthSection className="media-links" bordered={false}>
         <GithubLink />
         <EmailLink />
       </FullWidthSection>

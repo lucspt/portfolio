@@ -13,6 +13,7 @@ export const Projects = () => {
       || e.isIntersecting
     );
   });
+  console.log(projects[1]);
 
   return (
     <BorderContainedSection 
@@ -24,11 +25,11 @@ export const Projects = () => {
         <div className="projects">
           {projects.map((p, i) => (
             <ProjectWidget 
-              link={p.url} 
               name={p.name} 
               key={p.name}
               slideIndex={i + 1}
-              imageSrc={p.image}
+              imageSrc={p.thumbnail}
+              id={p.id}
             />
           ))}
         </div>

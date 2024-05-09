@@ -1,8 +1,8 @@
 import { MediaLink } from "./MediaLink";
 
-export const GithubLink = () => {
+export const GithubLink = ({ to="https://github.com/lucspt" }) => {
   return (
-    <MediaLink to="https://github.com/lucspt">
+    <MediaLink to={to}>
       <svg
         height="40"
         aria-hidden="true"

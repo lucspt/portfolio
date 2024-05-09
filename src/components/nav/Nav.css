@@ -12,10 +12,15 @@
   border-right: var(--container-border);
   border-left: var(--container-border);
   margin: 0 auto;
-  height: calc(100% + 20px);
   position: absolute;
   inset: 0;
+  height: calc(100% + 24px);
+  z-index: 0;
   max-width: calc(var(--container-width) - 24px);
+}
+
+.nav-main:has( .home ) .borders {
+  height: calc(100% + 20px);
 }
 
 .nav-main .link-container {
@@ -26,9 +31,15 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  position: relative;
+  z-index: 1;
   gap: 40px;
 }
 
 .nav-main a:focus-visible {
   outline: none;
+}
+
+.link-container a {
+  pointer-events: all;
 }

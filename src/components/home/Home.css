@@ -16,6 +16,11 @@
   background-size: 24px 24px;
 }
 
+.intro .border-container::after,
+.intro .border-container::before {
+  border-left: none;
+}
+
 @keyframes slideAcross {
   from { left: 100%; } 
   to { left: 0%; }
@@ -87,7 +92,7 @@ section .title-upright {
   transform: 
     translateX(-100%) 
     translateX(-12px) 
-    translateY(4px) 
+    translateY(8px) 
     rotate(-180deg);
   font-weight: normal;
   margin: 0;
@@ -102,22 +107,34 @@ section .title-upright {
   border-bottom: var(--border-vertical);
 }
 
-.cliffhanger p {
-  font-size: 1.25em;
-  margin: 0;
-  padding: 0px 40px;
-  line-height: 2;
+.cliffhanger .border-section-wrapper {
+  padding: 0;
 }
 
+.cliffhanger h2 {
+  margin: 0;
+}
+
+.cliffhanger .contained-width {
+  padding: 44px 40px;
+}
+
+.cliffhanger span {
+  font-weight: 400;
+  display: inline-block;
+  line-height: 1.5;
+  text-wrap: balance;
+}
 
 .slide-up {
   --anim-duration: .5s;
   --timing: cubic-bezier(.215,.61,.355,1);
+  --delay: .08s;
   transform: translateY(50px);
   opacity: 0;
   animation: 
-  slideUp var(--anim-duration) var(--timing) forwards,
-  fadeIn var(--anim-duration) var(--timing) forwards;
+  slideUp var(--anim-duration) var(--timing) var(--delay) forwards,
+  fadeIn var(--anim-duration) var(--timing) var(--delay) forwards;
 }
 
 @keyframes slideUp {
@@ -142,25 +159,33 @@ section .title-upright {
 
 .project {
   --anim-duration: .2s;
-  max-width: calc(var(--container-width / 4) - 24px);
   display: flex;
   flex-direction: column;
-  padding: 20px;
   position: relative;
   cursor: pointer;
+  height: 432px;
+  max-width: 390px;
+  outline: solid 1px var(--color-black-deep);
+}
+
+.project .info {
+  padding: 20px;
+  font-size: 18px;
 }
 
 .project .bg {
   background-color: #100f0f;
-  border-radius: 13px;
   inset: 0;
   position: absolute;
   transition: transform ease var(--anim-duration), border-radius ease-out .17s;
 }
 
+.project .image {
+  border-bottom: var(--border-vertical);
+}
+
 .project:hover .bg {
   transform: scale(1.01);
-  border-radius: 5px;
 }
 
 .project .hover-bg {
@@ -179,30 +204,28 @@ section .title-upright {
   transition: transform var(--anim-duration) ease-in-out;
 }
 
-.project:hover .hover-lift {
-  transform: translateY(-4px);
-}
-
 .project .container {
   z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project img {
-  max-width: 350px;
-  height: 220px;
+  height: 100%;
   min-width: 0px;
   width: 100%;
 }
 
 
-.languages .logos {
+.tools .logos {
   margin: 0 auto;
   padding-bottom: 24px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.languages img {
+.tools img {
   height: 80px;
   width: auto;
 }
@@ -215,7 +238,24 @@ section .title-upright {
   gap: 30px;
 }
 
+.projects-section {
+  min-height: 530px;
+}
+
 .projects-section .border-container::before,
 .projects-section .border-container::after {
-  height: calc(100% + 120px);
+  height: calc(100% + 90px + 32px);
+  transform: translateY(-32px);
+}
+
+@media screen and (min-width: 1381px) {
+
+  .cliffhanger .border-section-wrapper {
+    padding-bottom: 30px;
+  }
+}
+
+.home .tool {
+  max-width: 80px;
+  max-height: 80px;
 }
