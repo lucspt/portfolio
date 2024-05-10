@@ -68,7 +68,6 @@
   height: 100px;
   width: 320px;
   display: grid;
-  align-self: flex-end;
   padding: 10px;
   position: relative;
 }
@@ -125,12 +124,14 @@
   /* padding: 44px 40px; */
 }
 
-/* .project-images .image {
-  padding: 12px;
-} */
-
 .built-with img,
 .project-images img {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .built-with {
+    align-self: flex-end;
+  }
 }

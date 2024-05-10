@@ -36,8 +36,8 @@ export const Project = () => {
       </section>
       <section className="project-images">
         <div className="images-container padded-container">
-          {project.images.map(imageSrc => (
-            <span className="image">
+          {project.images.map((imageSrc) => (
+            <span className="image" key={imageSrc}>
               <img src={imageSrc} />
             </span>
           ))}
