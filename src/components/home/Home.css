@@ -112,19 +112,32 @@ section > div:has( .title-upright ) {
   font-size: 20px;
 }
 
-.slide-up {
-  --anim-duration: .5s;
-  --timing: cubic-bezier(.215,.61,.355,1);
-  --delay: .08s;
-  transform: translateY(50px);
-  opacity: 0;
-  animation: 
-  slideUp var(--anim-duration) var(--timing) var(--delay) forwards,
-  fadeIn var(--anim-duration) var(--timing) var(--delay) forwards;
+.projects-section {
+  padding-block: 64px;
 }
 
-@keyframes slideUp {
-  to { transform: translateY(0px); }
+.projects-section .border-section-children-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-section .border-container::before,
+.projects-section .border-container::after {
+  height: calc(100% + 90px + 32px);
+  transform: translateY(-32px);
+}
+
+.projects-section .border-section-children-container {
+  min-height: 100%;
+}
+
+.projects-section .scroll-indicator {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 .projects {
@@ -147,9 +160,13 @@ section > div:has( .title-upright ) {
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  height: 432px;
-  outline: solid 1px var(--color-black-deep);
+  border: solid 1px var(--color-black-deep);
   transition: transform .5s cubic-bezier(.215,.61,.355,1), opacity .5s cubic-bezier(.215,.61,.355,1);
+}
+
+.project .image,
+.project .info { 
+  flex: 1;
 }
 
 .project .info {
@@ -158,18 +175,16 @@ section > div:has( .title-upright ) {
 }
 
 .project .bg {
-  background-color: #100f0f;
-  inset: 0;
-  position: absolute;
-  transition: transform ease var(--anim-duration), border-radius ease-out .17s;
-}
-
-.project .image {
-  border-bottom: var(--border-vertical);
+  display: none;
 }
 
 .project:hover .bg {
   transform: scale(1.01);
+}
+
+.projects-section .min-height-contain {
+  min-height: calc(max(100%, 500px));
+  height: 500px;
 }
 
 .project .hover-bg {
@@ -196,7 +211,7 @@ section > div:has( .title-upright ) {
 }
 
 .project img {
-  height: 100%;
+  height: auto;
   min-width: 0px;
   width: 100%;
 }
@@ -218,46 +233,25 @@ section > div:has( .title-upright ) {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 165px;
   gap: 30px;
 }
 
-.projects-section .border-section-wrapper {
-  --project-widgets-height: 564px;
-  min-height: var(--project-widgets-height);
-  height: var(--project-widgets-height);
-}
-
-.projects-section .border-section-children-container {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.projects-section .border-container::before,
-.projects-section .border-container::after {
-  height: calc(100% + 90px + 32px);
-  transform: translateY(-32px);
-}
-
-.projects-section .scroll-indicator {
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-}
 
 .projects-section .scroll {
-  max-width: 320px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: center;
   gap: 12px;
   cursor: default;
   align-items: center;
+  justify-content: center;
   user-select: none;
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.projects-section .scroll {
+  display: none;
 }
 
 .projects-section .scroll button {
@@ -311,7 +305,27 @@ section .title-upright {
   padding-left: 12px;
   padding-bottom: 12px;
   margin: 0;
-  position: absolute;
+}
+
+@media screen and (min-width: 920px) {
+  .projects-section .scroll {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .project-widget-container {
+    transform: translateX(calc(var(--translate-factor) * 20));
+    width: calc(var(--container-width) / 3);
+  }
+  
+  .project .bg {
+    background-color: #100f0f;
+    inset: 0;
+    position: absolute;
+    transition: transform ease var(--anim-duration), border-radius ease-out .17s;
+  }
+
 }
 
 @media screen and (min-width: 1380px) {
@@ -319,10 +333,12 @@ section .title-upright {
     padding: 0;
     top: 0;
     writing-mode: vertical-lr;
+    position: absolute;
     transform: 
       translateX(-100%) 
       translateX(-12px) 
       translateY(14px) 
       rotate(-180deg);
     }
+
   }

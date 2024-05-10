@@ -1,3 +1,5 @@
+import "./SlideUpAnimation.css";
+
 const animDelay = .1;
 
 export const SlideUpAnimation = ({ order=0, onFinished, shouldAnimate=true, children }) => {

@@ -4,9 +4,9 @@
   }
 }
 
-@media screen and (min-width: 1380px) {
+@media screen and (min-width: 1300px) {
   .padded-container {
-    --container-padding: 0px;
+    --container-padding: 0px !important;
   }
 }
 
