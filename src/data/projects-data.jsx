@@ -1,4 +1,7 @@
-import spriveWebThumbnail from "../assets/sprive-web-thumbnail.png"
+import spriveWebThumbnail from "../assets/Sprive-web-overview.png"
+import spriveWebEmissions from "../assets/Sprive-web-emissions.png";
+import spriveWebReductions from "../assets/Sprive-web-reductions.png";
+import spriveWebProduct from "../assets/Sprive-web-product.png";
 import { PythonLogo } from "../components/common/PythonLogo"
 import { ReactLogo } from "../components/common/ReactLogo"
 import { JavaScriptLogo } from "../components/common/JavaScriptLogo";
@@ -53,7 +56,8 @@ export const projects = [
     description: (
       `Sprive web is an app that was made with the purpose of helping businesses measure their carbon emissions, and ultimately reduce them. 
       It offers emissions measurements from scope level down to the activity level, product footprint calculations, reduction simulating and more!`
-    )
+    ),
+    images: [spriveWebThumbnail, spriveWebProduct, spriveWebEmissions, spriveWebReductions]
   },
   {
     name: "Sprive mobile",

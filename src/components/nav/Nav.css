@@ -9,14 +9,14 @@
 
 
 .nav-main .borders {
-  border-right: var(--container-border);
-  border-left: var(--container-border);
+  border-right: var(--dashed-border);
+  border-left: var(--dashed-border);
   margin: 0 auto;
   position: absolute;
   inset: 0;
   height: calc(100% + 24px);
   z-index: 0;
-  max-width: calc(var(--container-width) - 24px);
+  max-width: calc(min(100%, var(--container-width)) - 24px)
 }
 
 .nav-main:has( .home ) .borders {

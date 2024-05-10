@@ -8,7 +8,7 @@ export const Nav = () => {
       <div className="borders" />
       <div className="link-container">
         <div className="nav-link">
-          <Link to="/">Projects</Link>
+          <Link to="/">Home</Link>
         </div>
         <div className="nav-link">
           <Link to="/about">About</Link>

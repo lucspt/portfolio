@@ -9,6 +9,10 @@
   animation: fadeIn 0.2s ease forwards;
 }
 
+.project-page .padded-container {
+  --container-padding: 32px
+}
+
 .back {
   border-radius: 50%;
   height: 80px;
@@ -113,7 +117,20 @@
   gap: 25px;
 }
 
-.built-with img {
+.project-images .images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 52px;
+  /* padding: 44px 40px; */
+}
+
+/* .project-images .image {
+  padding: 12px;
+} */
+
+.built-with img,
+.project-images img {
   height: 100%;
   width: 100%;
 }

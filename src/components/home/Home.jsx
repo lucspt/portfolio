@@ -2,7 +2,7 @@ import "./Home.css";
 import { InteractiveText } from "../common/InteractiveText";
 import { GithubLink } from "../common/GithubLink";
 import { EmailLink } from "../common/EmailLink";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";

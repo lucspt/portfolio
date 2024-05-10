@@ -1,6 +1,6 @@
 
 
-export const BorderContainedSection = ({ className="", sectionTitle, borderTop=true, children }) => {
+export const BorderContainedSection = ({ className="", sectionTitle, padded=true, children }) => {
 
   return (
     <section 
@@ -11,7 +11,7 @@ export const BorderContainedSection = ({ className="", sectionTitle, borderTop=t
             {sectionTitle && (
               <h2 className="title-upright">{ sectionTitle }</h2>
             )}
-          <div style={{ padding: "0px 20px" }}>
+          <div style={{ padding: padded ? "0px 24px" : "0px" }}>
             { children }
           </div>
         </div>

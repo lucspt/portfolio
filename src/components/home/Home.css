@@ -1,8 +1,10 @@
 .home {
+  --border-vertical: solid 1px var(--color-black-deep);
   width: 100%;
   height: 100%;
-  --border-vertical: solid 1px var(--color-black-deep)
+  overflow-x: hidden;
 }
+
 
 .home-section.intro {
   height: 750px;
@@ -74,7 +76,7 @@ section > div:has( .title-upright ) {
   position: absolute;
   height: 100%;
   z-index: 1;
-  border-left: var(--container-border);
+  border-left: var(--dashed-border);
 }
 
 .border-container::after {
@@ -92,7 +94,7 @@ section .title-upright {
   transform: 
     translateX(-100%) 
     translateX(-12px) 
-    translateY(8px) 
+    translateY(14px) 
     rotate(-180deg);
   font-weight: normal;
   margin: 0;
@@ -124,6 +126,7 @@ section .title-upright {
   display: inline-block;
   line-height: 1.5;
   text-wrap: balance;
+  font-size: 20px;
 }
 
 .slide-up {
@@ -142,15 +145,13 @@ section .title-upright {
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-  justify-content: center;
-  padding: 17px;
   min-height: 490px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: var(--container-width);
 }
 
 .projects header {
@@ -164,8 +165,8 @@ section .title-upright {
   position: relative;
   cursor: pointer;
   height: 432px;
-  max-width: 390px;
   outline: solid 1px var(--color-black-deep);
+  transition: transform .5s cubic-bezier(.215,.61,.355,1), opacity .5s cubic-bezier(.215,.61,.355,1);
 }
 
 .project .info {
@@ -204,7 +205,7 @@ section .title-upright {
   transition: transform var(--anim-duration) ease-in-out;
 }
 
-.project .container {
+.project .widget {
   z-index: 1;
   height: 100%;
   display: flex;
@@ -239,7 +240,7 @@ section .title-upright {
 }
 
 .projects-section {
-  min-height: 530px;
+  min-height: 564px;
 }
 
 .projects-section .border-container::before,
@@ -248,10 +249,59 @@ section .title-upright {
   transform: translateY(-32px);
 }
 
+.projects-section .scroll-indicator {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.projects-section .scroll {
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  cursor: default;
+  align-items: center;
+  user-select: none;
+}
+
+.projects-section .scroll button {
+  display: flex;
+  align-items: center;
+}
+
+.projects-section .scroll .arrow {
+  cursor: pointer;
+}
+
+.projects:before {
+  inset: 0;
+  position: absolute;
+}
+
+.projects-section .scroll-indicator.active {
+  outline: solid 1px var(--color-white);
+  background-color: transparent;
+}
+
+.projects-section .scroll-position {
+  display: flex;
+  gap: 12px;
+}
+
 @media screen and (min-width: 1381px) {
 
   .cliffhanger .border-section-wrapper {
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1017px) {
+  .cliffhanger span {
+    font-size: unset;
   }
 }
 

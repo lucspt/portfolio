@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { Nav } from "./components/nav/Nav";
 import "./App.css"
 
@@ -8,6 +8,11 @@ export function App() {
     <div className="root">
       <Nav />
       <Outlet />
+      <ScrollRestoration 
+        getKey={(location) => {
+          return location.key
+        }}
+      />
     </div>
   )
 }

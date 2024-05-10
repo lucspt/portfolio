@@ -1,6 +1,12 @@
-@media screen and (max-width: 1381px) {
+@media screen and (min-width: 900px) {
   :root {
-    --container-border: none !important;
+    --dashed-border: dashed 1px #383434 !important;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .padded-container {
+    --container-padding: 0px;
   }
 }
 
@@ -13,7 +19,7 @@
   --container-width: 1380px;
   --font-large: 1.3em;
   --font-bold-1: 900;
-  --container-border: dashed 1px #383434;
+  --dashed-border: none;
   --bordered-page-width: calc(var(--container-width) - 24px);
 }
 
@@ -62,6 +68,16 @@ body, html, #root {
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.25s ease-in forwards;
+}
+
+.padded-container {
+  --container-padding: 24px 12px;
+  padding: var(--container-padding);
+}
+
+.full-space {
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes fadeIn {

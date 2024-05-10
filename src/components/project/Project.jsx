@@ -12,7 +12,7 @@ export const Project = () => {
         <span className="material-symbols-outlined">arrow_back</span>
       </button> */}
       <section className="project-info">
-        <div className="container-grid">
+        <div className="container-grid padded-container">
           <div className="title">
             <Header text={project.name} />
             <GithubLink to={project.url} />
@@ -32,6 +32,15 @@ export const Project = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="project-images">
+        <div className="images-container padded-container">
+          {project.images.map(imageSrc => (
+            <span className="image">
+              <img src={imageSrc} />
+            </span>
+          ))}
         </div>
       </section>
     </div>
