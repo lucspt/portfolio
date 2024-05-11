@@ -2,6 +2,11 @@ import spriveWebThumbnail from "../assets/Sprive-web-overview.png"
 import spriveWebEmissions from "../assets/Sprive-web-emissions.png";
 import spriveWebReductions from "../assets/Sprive-web-reductions.png";
 import spriveWebProduct from "../assets/Sprive-web-product.png";
+import spriveMobileThumnail from "../assets/Sprive-mobile-thumbnail.png";
+import spriveMobileScreens from "../assets/Sprive-mobile-screens.png";
+import spriveMobilePage1 from "../assets/Sprive-mobile-page1.png";
+import spriveMobilePage2 from "../assets/Sprive-mobile-page2.png";
+import spriveBackendImage from "../assets/Sprive-backend.png";
 import { PythonLogo } from "../components/common/PythonLogo"
 import { ReactLogo } from "../components/common/ReactLogo"
 import { JavaScriptLogo } from "../components/common/JavaScriptLogo";
@@ -10,26 +15,6 @@ import { CSSLogo } from "../components/common/CSSLogo";
 import { MongoDBLogo } from "../components/common/MongoDBLogo";
 
 export const projects = [
-  {
-    name: "Sprive backend",
-    url: "https://github.com/lucspt/sprive-backend",
-    thumbnail: "https://placeholder.co/390x227",
-    id: "sprive-backend",
-    tools: [
-      {
-        name: "Python",
-        LogoComponent: () => <PythonLogo />
-      },
-      {
-        name: "MongoDB",
-        LogoComponent: () => <MongoDBLogo width={40} height={40} />
-      }
-    ],
-    description: (
-      `Sprive backend is an api that gives access to carbon emissions data, calculations & tracking. 
-      It powers other apps, like Sprive mobile and web, which are carbon footprint trackers.`
-    )
-  },
   {
     name: "Sprive web",
     url: "https://github.com/lucspt/sprive-web",
@@ -62,7 +47,7 @@ export const projects = [
   {
     name: "Sprive mobile",
     url: "https://github.com/lucspt/sprive-mobile",
-    thumbnail: "https://placeholder.co/390x227",
+    thumbnail: spriveMobileThumnail,
     id: "sprive-mobile",
     tools: [
       {
@@ -77,7 +62,29 @@ export const projects = [
     description: (
       `Sprive mobile is an IOS & Android React Native application that allows users to track their carbon footprint, and helps them to reduce it. 
       Users can see the environmental impact of certain products, and record the emissions of the ones that they purchase. They can 
-      also set pledges, which are personal goals to help them reduce their footprint.`
-    )
-  }
+      also set pledges, which are personal goals to help them lower their footprint.`
+    ),
+    images: [spriveMobileScreens, spriveMobilePage1, spriveMobilePage2]
+  },
+  {
+    name: "Sprive backend",
+    url: "https://github.com/lucspt/sprive-backend",
+    thumbnail: spriveBackendImage,
+    id: "sprive-backend",
+    tools: [
+      {
+        name: "Python",
+        LogoComponent: () => <PythonLogo />
+      },
+      {
+        name: "MongoDB",
+        LogoComponent: () => <MongoDBLogo width={40} height={40} />
+      }
+    ],
+    description: (
+      `Sprive backend is an api that gives access to carbon emissions data, calculations & tracking. 
+      It powers other apps, like Sprive mobile and web, which are carbon footprint trackers.`
+    ),
+    images: [spriveBackendImage]
+  },
 ]

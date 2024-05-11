@@ -210,13 +210,6 @@ section > div:has( .title-upright ) {
   flex-direction: column;
 }
 
-.project img {
-  height: auto;
-  min-width: 0px;
-  width: 100%;
-}
-
-
 .tools .logos {
   margin: 0 auto;
   padding-bottom: 24px;
