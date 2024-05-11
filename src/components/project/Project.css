@@ -17,7 +17,7 @@
   border-radius: 50%;
   height: 80px;
   width: 80px;
-  background-color: var(--color-black-deep);
+  background-color: var(--color-black);
   pointer-events: all;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .built-with {
-  --border: solid 1px var(--color-black-deep);
+  --border: solid 1px var(--color-black);
   --title-spacing: 12px;
   height: 100px;
   width: 320px;
