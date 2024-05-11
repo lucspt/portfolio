@@ -23,6 +23,12 @@
   --bordered-page-width: calc(var(--container-width) - 24px);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
