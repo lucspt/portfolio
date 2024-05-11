@@ -40,7 +40,9 @@ header span.about {
   color: var(--color-aqua);
   cursor: pointer;
   padding-bottom: 4px;
-  font-size: min(15px, var(--desc-font-size))
+  font-size: min(15px, var(--desc-font-size));
+  pointer-events: all;
+  display: inline-block;
 }
 
 .desc-container .prove-it-button {
@@ -51,28 +53,15 @@ header span.about {
   margin-top: 32px;
   position: relative;
   color: var(--color-white);
-  transition: transform 0.17s ease;
   cursor: pointer;
-}
-
-.prove-it-button::after {
-  content: "";
-  inset: 0;
-  position: absolute;
-  background-color: var(--color-black);
-  z-index: -1;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .prove-it-button:hover {
   border-radius: 0px;
   transform: translateX(2px);
-}
+  background-color: rgba(0, 0, 0, 0.3);
 
-.prove-it-button:hover::after {
-  opacity: 0.1;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
 }
 
 .about .footer {

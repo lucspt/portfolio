@@ -108,7 +108,7 @@ section > div:has( .title-upright ) {
 }
 
 .projects-section {
-  padding-block: 64px;
+  padding-bottom: 64px;
 }
 
 .projects-section .border-section-children-container {
@@ -119,8 +119,8 @@ section > div:has( .title-upright ) {
 
 .projects-section .border-container::before,
 .projects-section .border-container::after {
-  height: calc(100% + 160px + 120px);
-  transform: translateY(-120px);
+  height: calc(100% + 160px + 60px);
+  transform: translateY(-60px);
 }
 
 .projects-section .border-section-children-container {
