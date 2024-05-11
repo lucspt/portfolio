@@ -1,0 +1,107 @@
+header.contained-width {
+  padding: 0px 24px;
+}
+
+header span.about {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #6c6c6c;
+}
+
+.header-container {
+  padding: 44px 40px;
+  font-size: 16px;
+  display: grid;
+  row-gap: 25px;
+}
+
+.desc-container {
+  --desc-font-size: 16px;
+  max-width: 680px;
+  text-align: center;
+}
+
+.desc-container h1, .desc-container p {
+  letter-spacing: -0.01em;
+}
+
+.desc-container p {
+  font-size: var(--desc-font-size);
+  text-wrap: balance;
+  text-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  line-height: 2;
+  margin-block-start: 32px;
+}
+
+.desc-container .prove-it {
+  color: var(--color-aqua);
+  cursor: pointer;
+  padding-bottom: 4px;
+  font-size: min(15px, var(--desc-font-size))
+}
+
+.desc-container .prove-it-button {
+  background-color: var(--color-black);
+  padding: 7px 20px;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 32px;
+  position: relative;
+  color: var(--color-white);
+  transition: transform 0.17s ease;
+  cursor: pointer;
+}
+
+.prove-it-button::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: var(--color-black);
+  z-index: -1;
+  transition: background-color 0.2s ease;
+}
+
+.prove-it-button:hover {
+  border-radius: 0px;
+  transform: translateX(2px);
+}
+
+.prove-it-button:hover::after {
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.about .footer {
+  position: fixed;
+  border-top: solid 1px var(--color-black);
+  bottom: 0;
+}
+
+@media screen and (min-width: 920px) {
+  .desc-container {
+    --desc-font-size: 17px;
+  } 
+
+}
+
+@media screen and (min-width: 750px) {
+
+  .desc-container {
+    text-align: unset;
+  }
+
+  .desc-container .prove-it-button {
+    width: auto;
+    display: inline-block;
+  }
+
+  .desc-container p {
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+}

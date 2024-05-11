@@ -1,8 +1,7 @@
 import "./Home.css";
 import { InteractiveText } from "../common/InteractiveText";
-import { GithubLink } from "../common/GithubLink";
-import { EmailLink } from "../common/EmailLink";
-import { useEffect, useState } from "react";
+import { MediaLinksFooter } from "../common/MediaLinksFooter";
+import { useState } from "react";
 import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";
@@ -44,10 +43,7 @@ export const Home = () => {
         }}
       ></div>
       <Tools />
-      <FullWidthSection className="media-links" bordered={false}>
-        <GithubLink />
-        <EmailLink />
-      </FullWidthSection>
+      <MediaLinksFooter />
       <div className="scroll-padding-bottom container-border" />
     </div>
   );

@@ -1,6 +1,6 @@
 @media screen and (min-width: 900px) {
   :root {
-    --dashed-border: dashed 1px #383434 !important;
+    --dashed-border: dashed 1px var(--color-grey-secondary) !important;
   }
 }
 
@@ -12,7 +12,7 @@
 
 :root {
   --color-background: #121212;
-  --color-black-deep: #0b0b0b;
+  --color-black: #0b0b0b;
   --color-grey-secondary: #383434;
   --color-white: #fff;
   --font-size: 17px;
@@ -63,6 +63,10 @@ body, html, #root {
   font-size: var(--font-size);
 }
 
+input, button, a {
+  font-family: inherit;
+}
+
 .root {
   height: 100%;
   width: 100%;
@@ -76,6 +80,7 @@ body, html, #root {
   animation: fadeIn 0.25s ease-in forwards;
 }
 
+
 .padded-container {
   --container-padding: 24px 12px;
   padding: var(--container-padding);
@@ -84,6 +89,11 @@ body, html, #root {
 .full-space {
   height: 100%;
   width: 100%;
+}
+
+.contained-width {
+  margin: 0 auto;
+  max-width: var(--container-width);
 }
 
 @keyframes fadeIn {

@@ -1,5 +1,5 @@
 .home {
-  --border-vertical: solid 1px var(--color-black-deep);
+  --border-vertical: solid 1px var(--color-black);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -14,7 +14,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(var(--color-black-deep) 1px, transparent 1px);
+  background-image: radial-gradient(var(--color-black) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -32,11 +32,6 @@
 
 section > div:has( .title-upright ) {
   position: relative;
-  max-width: var(--container-width);
-}
-
-.contained-width {
-  margin: 0 auto;
   max-width: var(--container-width);
 }
 
@@ -160,7 +155,7 @@ section > div:has( .title-upright ) {
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  border: solid 1px var(--color-black-deep);
+  border: solid 1px var(--color-black);
   transition: transform .5s cubic-bezier(.215,.61,.355,1), opacity .5s cubic-bezier(.215,.61,.355,1);
 }
 
@@ -223,14 +218,6 @@ section > div:has( .title-upright ) {
   max-width: unset;
 }
 
-.media-links .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-
 .projects-section .scroll {
   width: 100%;
   display: flex;
@@ -270,6 +257,13 @@ section > div:has( .title-upright ) {
 .projects-section .scroll-position {
   display: flex;
   gap: 12px;
+}
+
+.media-links .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 @media screen and (min-width: 1381px) {
@@ -321,6 +315,7 @@ section .title-upright {
   }
 
 }
+
 
 @media screen and (min-width: 1380px) {
   section .title-upright {
