@@ -124,8 +124,8 @@ section > div:has( .title-upright ) {
 
 .projects-section .border-container::before,
 .projects-section .border-container::after {
-  height: calc(100% + 90px + 32px);
-  transform: translateY(-32px);
+  height: calc(100% + 160px + 120px);
+  transform: translateY(-120px);
 }
 
 .projects-section .border-section-children-container {
@@ -220,6 +220,7 @@ section > div:has( .title-upright ) {
 .tools img {
   height: 80px;
   width: auto;
+  max-width: unset;
 }
 
 .media-links .content {
