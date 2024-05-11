@@ -1,4 +1,4 @@
-### Portfolio
+# Portfolio
 
 Hey! This is the code for my portfolio. Just like the website: make yourself at home! 
 
