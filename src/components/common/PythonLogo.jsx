@@ -1,10 +1,10 @@
 export const PythonLogo = ({ width, height }) => {
-
   return (
     <span className="tool">
-      <img
-        src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
-        />
+      <img 
+        style={{ width, height }} 
+        src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+      />
     </span>
-  )
-}
+  );
+};

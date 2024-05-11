@@ -60,7 +60,7 @@ header span.about {
 .prove-it-button:hover {
   border-radius: 0px;
   transform: translateX(2px);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3gi);
 
 }
 
