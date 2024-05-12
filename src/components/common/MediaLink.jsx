@@ -1,5 +1,3 @@
-import "./MediaLink.css"
-
 export const MediaLink = ({ to, children }) => {
   
   return (
