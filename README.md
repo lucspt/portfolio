@@ -1,5 +1,7 @@
 # Portfolio
 
+[Live site](https://lucspt.github.io/portfolio/)
+
 Hey! This is the code for my portfolio. Just like the website: make yourself at home! 
 
 I built it with:
