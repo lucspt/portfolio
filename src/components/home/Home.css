@@ -182,6 +182,10 @@ section > div:has( .title-upright ) {
   height: 500px;
 }
 
+.projects-section .border-section-wrapper {
+  padding-right: 0px;
+}
+
 .project .hover-bg {
   transition: background-color .3s ease;
   background-color: transparent;
@@ -210,6 +214,7 @@ section > div:has( .title-upright ) {
   padding-bottom: 24px;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 10px;
 }
 
 .tools img {
@@ -295,6 +300,14 @@ section .title-upright {
   margin: 0;
 }
 
+@media screen and (min-width: 900px) {
+  .projects-section .border-section-wrapper {
+    padding-right: 12px;
+  }
+
+}
+
+
 @media screen and (min-width: 920px) {
   .projects-section .scroll {
     display: flex;
@@ -317,6 +330,11 @@ section .title-upright {
 }
 
 @media screen and (min-width: 720px) {
+
+  .tools .logos {
+    padding-top: 0;
+  }
+
   .tools img {
     height: 80px;
   }
