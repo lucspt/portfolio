@@ -96,6 +96,21 @@ input, button, a {
   max-width: var(--container-width);
 }
 
+.media-link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 0px 10px;
+  color: var(--color-white);
+}
+
+.media-link a {
+  inset: 0;
+  position: absolute;
+  cursor: pointer;
+} 
+
 @keyframes fadeIn {
   to { opacity: 1; }
 };
