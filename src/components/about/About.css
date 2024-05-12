@@ -17,7 +17,7 @@ header span.about {
 }
 
 .desc-container {
-  --desc-font-size: 16px;
+  --desc-font-size: 13px;
   max-width: 680px;
   text-align: center;
 }
@@ -68,6 +68,12 @@ header span.about {
   position: fixed;
   border-top: solid 1px var(--color-black);
   bottom: 0;
+}
+
+@media screen and (min-width: 410px) {
+    .desc-container {
+      --desc-font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 920px) {
