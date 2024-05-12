@@ -213,7 +213,7 @@ section > div:has( .title-upright ) {
 }
 
 .tools img {
-  height: 80px;
+  height: 40px;
   width: auto;
   max-width: unset;
 }
@@ -314,6 +314,12 @@ section .title-upright {
     transition: transform ease var(--anim-duration), border-radius ease-out .17s;
   }
 
+}
+
+@media screen and (min-width: 720px) {
+  .tools img {
+    height: 80px;
+  }
 }
 
 
