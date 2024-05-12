@@ -13,7 +13,7 @@ export const About = () => {
           <div className="desc-container">
             <h1>Hey,</h1>
             <p>
-              My name is Luca. 
+              my name is Luca. 
               I'm recognized by many as one of the best coders in the world. 
               Lol, just kidding. 
               Actually, I'm an ever aspiring learner, and I like to code because of the way it engages my mind.
