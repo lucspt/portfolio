@@ -12,7 +12,7 @@ export const Project = () => {
     <div className="project-page">
       <button className="back" onClick={() => nav("/")}>
         <img src={backArrow} />
-        <span>Back</span>
+        <span>Back</span> 
       </button>
       <section className="project-info">
         <div className="container-grid padded-container">
