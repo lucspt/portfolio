@@ -14,22 +14,25 @@
 }
 
 .back {
+  display: none;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  background-color: var(--color-black);
-  pointer-events: all;
+  width: fit-content;
+  position: fixed;
+  padding: 0px;
+  left: 2vw;
+  color: var(--color-white);
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 15px;
 }
 
-.back:hover {
-  transform: scale(1.02);
-}
-
-.back .material-symbols-outlined {
+.back img {
   transition: transform 0.2s ease;
 }
 
-.back:hover .material-symbols-outlined {
+.back:hover img {
   transform: translateX(calc(100% * -.1));
   pointer-events: none;
 }
@@ -137,3 +140,10 @@
     padding-right: 0px;
   }
 }
+
+@media screen and (min-width: 1528px) {
+  .back {
+    display: flex;
+  }
+}
+
