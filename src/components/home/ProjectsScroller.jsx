@@ -1,4 +1,5 @@
-
+import chevronLeft from "../../vectors/chevron-left.svg";
+import chevronRight from "../../vectors/chevron-right.svg";
 
 export const ProjectsScroller = ({ numProjects, next, prev, currentSlide }) => {
   
@@ -6,7 +7,7 @@ export const ProjectsScroller = ({ numProjects, next, prev, currentSlide }) => {
   return (
     <div className="scroll">
       <button onClick={prev}>
-        <span className="material-symbols-outlined arrow">chevron_left</span>
+        <img src={chevronLeft} />
       </button>
       <div className="scroll-position">
         {Array.from({ length: numProjects }).map((_, i) => (
@@ -14,7 +15,7 @@ export const ProjectsScroller = ({ numProjects, next, prev, currentSlide }) => {
         ))}
       </div>
       <button onClick={next}>
-        <span className="material-symbols-outlined arrow">chevron_right</span>
+        <img src={chevronRight} />
       </button>
     </div>
   )
