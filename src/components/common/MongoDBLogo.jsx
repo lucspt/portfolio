@@ -1,4 +1,4 @@
-import imageSrc from "../../assets/mongoDB-logo.svg";
+import imageSrc from "../../vectors/mongoDB-logo.svg";
 
 export const MongoDBLogo = ({ width, height }) => {
   return (
