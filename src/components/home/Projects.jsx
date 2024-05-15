@@ -83,7 +83,8 @@ export const Projects = () => {
         currentSlide={widgetScrollPosition}
         next={() => instanceRef.current.next()}
         prev={() => instanceRef.current.prev()}
-        />
+        moveToIdx={(idx) => instanceRef.current.moveToIdx(idx)}
+      />
     </BorderContainedSection>
   );
 };
