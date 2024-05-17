@@ -37,21 +37,27 @@ header span.about {
 }
 
 .desc-container .prove-it {
-  color: var(--color-aqua);
   cursor: pointer;
-  padding-bottom: 4px;
   font-size: min(15px, var(--desc-font-size));
   pointer-events: all;
   display: inline-block;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .desc-container .prove-it-button {
   background-color: var(--color-black);
-  padding: 7px 20px;
+  padding: 0px;
+  display: block;
   width: 100%;
   border-radius: 3px;
   margin-top: 32px;
   position: relative;
+  height: 35px;
   color: var(--color-white);
   cursor: pointer;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -90,7 +96,7 @@ header span.about {
   }
 
   .desc-container .prove-it-button {
-    width: auto;
+    width: 120px;
     display: inline-block;
   }
 
