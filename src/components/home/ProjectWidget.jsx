@@ -14,7 +14,7 @@ export function ProjectWidget({ index, id, name, imageSrc, slideIndex, translate
       >
         <div className="widget">
           <div className="image hover-lift">
-            <img src={imageSrc} />
+            <img src={imageSrc} alt={`A photo of the ${name} project`}/>
           </div>
           <div className="info">
             <p className="hover-lift">{name}</p>
