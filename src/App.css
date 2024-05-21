@@ -68,7 +68,7 @@ input, button, a {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 0.25s ease-in forwards;
+  animation: fadeIn var(--fade-in-duration, 0.25s) ease-in var(--fade-in-delay, 0s) forwards;
 }
 
 
