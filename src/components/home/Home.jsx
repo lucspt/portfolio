@@ -7,10 +7,7 @@ import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";
 import { Tools } from "./Tools";
 
-let _contentRendered = false;
 export const Home = () => {
-  const [introFinished, setIntroFinished] = useState(false);
-  const [contentRendered, setContentRendered] = useState(_contentRendered);
 
   return (
     <div className="home">
@@ -21,9 +18,6 @@ export const Home = () => {
           text="Make yourself at home!"
           order={2}
           block
-          onAnimationEnd={() => {
-            setIntroFinished(true);
-          }}
         />
       </BorderContainedSection>
       <FullWidthSection className="cliffhanger">
@@ -35,13 +29,6 @@ export const Home = () => {
         </h2>
       </FullWidthSection>
       <Projects />
-      <div
-        className={contentRendered ? "" : "fade-in"}
-        onAnimationEnd={() => {
-          _contentRendered = true;
-          setContentRendered(true);
-        }}
-      ></div>
       <Tools />
       <MediaLinksFooter />
       <div className="scroll-padding-bottom container-border" />
