@@ -11,7 +11,6 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Project = () => {
   const project = useLoaderData();
-  const nav = useNavigate();
   const location = useLocation();
   const containerRef = useRef();
   useScrollToTop(containerRef);
@@ -22,7 +21,7 @@ export const Project = () => {
         <div className="container-grid padded-container">
           <SlideUpAnimation>
             <div className="title">
-              <Header text={project.name} />
+              <Header text={project.name} className="project-name" />
               <GithubLink to={project.url} />
             </div>
           </SlideUpAnimation>

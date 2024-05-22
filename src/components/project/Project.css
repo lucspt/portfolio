@@ -29,6 +29,10 @@
   align-items: center;
 }
 
+.project-page .project-name {
+  text-transform: capitalize;
+}
+
 .project-page .description p {
   letter-spacing: -0.01em;
   line-height: 1.5;
