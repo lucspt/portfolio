@@ -1,10 +1,9 @@
 import "./Project.css";
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import { Header } from "../common/Header";
 import { GithubLink } from "../common/GithubLink";
 import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
-import { ArrowButton } from "../common/ArrowButton";
 import { ProjectsNavigator } from "./ProjectsNavigator";
 import { useRef } from "react";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
