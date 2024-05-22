@@ -210,15 +210,27 @@ section > div:has( .title-upright ) {
 }
 
 .tools .logos {
+  --tools-img-height: 40px;
+  --tools-padding-top: 10px;
+  --tools-padding-bottom: 24px;
   margin: 0 auto;
-  padding-bottom: 24px;
+  padding-bottom: var(--tools-padding-bottom);
+  padding-top: var(--tools-padding-top);
   display: flex;
   justify-content: space-evenly;
-  padding-top: 10px;
+  min-height: calc(
+    var(--tools-img-height) 
+    + var(--tools-padding-top) 
+    + var(--tools-padding-bottom)
+  );
+}
+
+.tools .logos > div {
+  height: var(--tools-img-height);
 }
 
 .tools img {
-  height: 40px;
+  height: var(--tools-img-height);
   width: auto;
   max-width: unset;
 }
@@ -287,8 +299,19 @@ section > div:has( .title-upright ) {
 }
 
 .home .tool {
-  max-width: 85px;
+  max-width: 80px;
   max-height: 80px;
+}
+
+.home .tools {
+  position: relative;
+}
+
+.tools .visibility {
+  position: absolute;
+  top: 25px;
+  height: 1px;
+  width: 1px;
 }
 
 section .title-upright {
@@ -331,14 +354,18 @@ section .title-upright {
 
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 700px) {
 
   .tools .logos {
-    padding-top: 0;
+    --tools-img-height: 55px;
   }
+}
 
-  .tools img {
-    height: 80px;
+@media screen and (min-width: 840px) {
+
+  .tools .logos {
+    --tools-img-height: 80px;
+    --tools-padding-top: 0px;
   }
 }
 

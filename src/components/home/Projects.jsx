@@ -11,7 +11,7 @@ import { containerWidth } from "../../constants";
 
 export const Projects = () => {
   const ref = useRef();
-  const isVisible = useElementInViewport(ref, (e) => {
+  const isVisible = useElementInViewport(ref, ([e]) => {
     const { current } = ref;
     return (
       window.scrollY > current.offsetTop + current.offsetHeight ||

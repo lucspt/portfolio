@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
-import { containerWidth } from "../../constants";
 
-export function ProjectWidget({ index, id, name, imageSrc, slideIndex, translateFactor }) {
+export function ProjectWidget({ id, name, imageSrc, slideIndex }) {
   const nav = useNavigate();
 
   return (
