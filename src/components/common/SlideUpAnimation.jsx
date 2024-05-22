@@ -2,11 +2,11 @@ import "./SlideUpAnimation.css";
 
 const animDelay = .1;
 
-export const SlideUpAnimation = ({ order=0, onFinished, shouldAnimate=true, offsetY=50, children }) => {
+export const SlideUpAnimation = ({ order=0, offsetY=50, children }) => {
 
   return (
     <div
-     className={shouldAnimate ? "slide-up" : ""}
+     className={"slide-up"}
      style={{ 
       animationDelay: `${order * animDelay}s`, 
       transform: `translateY(${offsetY}px)`
