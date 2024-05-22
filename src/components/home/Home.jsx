@@ -1,16 +1,19 @@
 import "./Home.css";
 import { InteractiveText } from "../common/InteractiveText";
 import { MediaLinksFooter } from "../common/MediaLinksFooter";
-import { useState } from "react";
+import { useRef } from "react";
 import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";
 import { Tools } from "./Tools";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Home = () => {
+  const containerRef = useRef();
+  useScrollToTop(containerRef);
 
   return (
-    <div className="home">
+    <div className="home" ref={containerRef}>
       <BorderContainedSection className="intro home-section" borderTop={false}>
         <span>Hi, </span>
         <InteractiveText text="I'm Luca Caputo" order={1} />

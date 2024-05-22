@@ -6,23 +6,18 @@ import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { ArrowButton } from "../common/ArrowButton";
 import { ProjectsNavigator } from "./ProjectsNavigator";
-import { projects } from "../../data/projects-data";
+import { useRef } from "react";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Project = () => {
   const project = useLoaderData();
   const nav = useNavigate();
   const location = useLocation();
+  const containerRef = useRef();
+  useScrollToTop(containerRef);
 
   return (
-    <div className="project-page">
-      {location.key !== "default" && (
-        <ArrowButton
-          onClick={() => nav("/")}
-          hoverText="Home"
-          className="home"
-          back
-        />
-      )}
+    <div className="project-page" ref={containerRef}>
       <section className="project-info">
         <div className="container-grid padded-container">
           <SlideUpAnimation>
