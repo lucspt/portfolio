@@ -120,18 +120,20 @@
 }
 
 .project-navigator {
+  --container-border-radius: 8px;
   position: fixed;
   right: 4vh;
   bottom: 4vh;
   display: flex;
+  max-height: fit-content;
+  max-width: 240px;
 }
 
 .project-navigator .fixed-container {
-  border-radius: 8px;
+  border-radius: var(--container-border-radius);
   display: flex;
-  width: 220px;
-  height: 100px;
-  align-items: center;
+  width: 240px;
+  min-height: 100px;
   align-self: center;
   background-color: var(--color-black);
   justify-content: center;
@@ -141,14 +143,42 @@
 .project-navigator .nav-btns {
   display: flex;
   justify-content: space-between;
+  align-self: flex-end;
+  padding-bottom: 32px;
   width: 50%;
 }
 
 .project-navigator .hover-text {
   bottom: 10px;
   left: 10px;
-  font-size: 16px;
   text-transform: capitalize;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  text-wrap: nowrap;
+  padding-left: 8px;
+  padding-top: 12px;
+}
+
+.project-navigator .thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: var(--container-border-radius);
+  background-color: var(--color-black);
+}
+
+.project-navigator .thumbnail-wrapper {
+  position: relative;
+}
+
+.project-navigator .thumbnail-wrapper::after {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 24px;
+  background-color: var(--color-black);
+  content: "";
+  width: 100%;
 }
 
 @media screen and (min-width: 1280px) {

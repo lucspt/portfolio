@@ -57,7 +57,11 @@ export const Project = () => {
           ))}
         </div>
       </section>
-      <ProjectsNavigator nextProject={projects[project.nextProjectIdx]} />
+      <ProjectsNavigator 
+        nextProjectIdx={project.nextProjectIdx} 
+        previousProjectIdx={project.previousProjectIdx}
+        key={location.pathname}
+      />
     </div>
   );
 };

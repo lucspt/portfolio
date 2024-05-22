@@ -66,7 +66,7 @@ export const projects = [
     id: "sprive-mobile",
     tools: [
       {
-        name: "React Native",
+        name: "React",
         LogoComponent: () => <ReactLogo />,
       },
       {
