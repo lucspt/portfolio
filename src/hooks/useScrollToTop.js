@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 
-export const useScrollToTop = (containerRef, options={}) => {
+export const useScrollToTop = (containerRef={ current: document.documentElement }, options={}) => {
   useEffect(() => {
     if (containerRef.current) {
       containerRef.current.scrollTo({

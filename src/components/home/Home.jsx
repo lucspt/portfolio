@@ -9,11 +9,10 @@ import { Tools } from "./Tools";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Home = () => {
-  const containerRef = useRef();
-  useScrollToTop(containerRef);
+  useScrollToTop();
 
   return (
-    <div className="home" ref={containerRef}>
+    <div className="home">
       <BorderContainedSection className="intro home-section" borderTop={false}>
         <span>Hi, </span>
         <InteractiveText text="I'm Luca Caputo" order={1} />
