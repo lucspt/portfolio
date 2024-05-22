@@ -5,6 +5,6 @@ export const projectLoader = async ({ params }) => {
   const projectIdx = projects.findIndex(({ id }) => id === projectId);
   return {
     ...projects[projectIdx], 
-    nextProjectId: projects[projectIdx + 1]?.id
+    nextProjectIdx: projectIdx + 1 >= projectIdx.length ? null : projectIdx + 1
   };
 };

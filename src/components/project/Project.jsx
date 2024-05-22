@@ -1,25 +1,28 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
-import { Header } from "../common/Header";
 import "./Project.css";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { Header } from "../common/Header";
 import { GithubLink } from "../common/GithubLink";
-import backArrow from "../../vectors/arrow-back.svg";
-import nextArrow from "../../vectors/arrow-forward.svg";
 import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
-import { ArrowButton } from "./ArrowButton";
+import { ArrowButton } from "../common/ArrowButton";
+import { ProjectsNavigator } from "./ProjectsNavigator";
+import { projects } from "../../data/projects-data";
 
 export const Project = () => {
   const project = useLoaderData();
   const nav = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="project-page">
-      <ArrowButton
-        onClick={() => nav(-1)}
-        className="home"
-        text="Home"
-        arrowImageSrc={backArrow}
-      />
+      {location.key !== "default" && (
+        <ArrowButton
+          onClick={() => nav("/")}
+          hoverText="Home"
+          className="home"
+          back
+        />
+      )}
       <section className="project-info">
         <div className="container-grid padded-container">
           <SlideUpAnimation>
@@ -54,14 +57,7 @@ export const Project = () => {
           ))}
         </div>
       </section>
-      {project.nextProjectId && (
-        <ArrowButton
-          text="Next"
-          className="next"
-          onClick={() => nav(`/project/${project.nextProjectId}`)}
-          arrowImageSrc={nextArrow}
-        />
-      )}
+      <ProjectsNavigator nextProject={projects[project.nextProjectIdx]} />
     </div>
   );
 };

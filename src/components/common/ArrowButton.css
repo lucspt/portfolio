@@ -1,0 +1,47 @@
+.arrow-btn.forward {
+  --translate-direction: 1
+}
+
+.arrow-btn._back {
+  --translate-direction: -1;
+  flex-direction: row-reverse;
+}
+
+.arrow-btn {
+  border-radius: 50%;
+  width: max-content;
+  padding: 0px;
+  color: var(--color-white);
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 15px;
+  height: fit-content;
+  display: flex;
+}
+
+.arrow-btn img {
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn:hover img {
+  transform: translateX(calc(100% * (.1 * var(--translate-direction))));
+  pointer-events: none;
+}
+
+.arrow-btn span {
+  font-size: 15px;
+}
+
+.arrow-btn .hover-text {
+  opacity: 0;
+}
+
+.arrow-btn:hover .hover-text {
+  animation: var(--fade-in-animation);
+  animation-duration: 0.25s;
+  animation-delay: 0.17s;
+  display: inline-block;
+}
