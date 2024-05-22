@@ -7,7 +7,7 @@ export const ArrowButton = ({ arrowImageSrc, text, onClick, className="" }) => {
     location.key !== "default" && (
       <button className={`arrow-btn ${className}`} onClick={onClick}>
         <img src={arrowImageSrc} />
-        <span>{ text }</span>
+        { text && <span>{ text }</span> }
       </button>
     )
   );

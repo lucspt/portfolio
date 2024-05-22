@@ -16,8 +16,8 @@ export const Project = () => {
     <div className="project-page">
       <ArrowButton
         onClick={() => nav(-1)}
-        text="Back"
-        className="back"
+        className="home"
+        text="Home"
         arrowImageSrc={backArrow}
       />
       <section className="project-info">
