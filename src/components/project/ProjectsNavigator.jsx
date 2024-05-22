@@ -1,6 +1,6 @@
 import { ArrowButton } from "../common/ArrowButton";
 import { projects } from "../../data/projects-data";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { useLocation, useNavigate } from "react-router-dom";
 

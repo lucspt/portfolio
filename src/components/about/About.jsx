@@ -1,5 +1,4 @@
 import { MediaLinksFooter } from "../common/MediaLinksFooter";
-import { Section } from "../common/Section";
 import "./About.css";
 
 export const About = () => {
