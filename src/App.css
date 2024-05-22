@@ -21,6 +21,7 @@
   --font-bold-1: 900;
   --dashed-border: none;
   --bordered-page-width: calc(var(--container-width) - 24px);
+  --fade-in-animation: fadeIn ease-in forwards;
 }
 
 img {
@@ -68,7 +69,9 @@ input, button, a {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn var(--fade-in-duration, 0.25s) ease-in var(--fade-in-delay, 0s) forwards;
+  animation: var(--fade-in-animation);
+  animation-delay: var(--fade-in-delay, 0s);
+  animation-duration: var(--fade-in-duration, 0.25s);
 }
 
 

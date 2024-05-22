@@ -13,39 +13,13 @@
   --container-padding: 32px
 }
 
-.arrow-btn {
-  display: none;
-  border-radius: 50%;
-  width: max-content;
-  position: fixed;
-  padding: 0px;
-  top: 134px;
-  color: var(--color-white);
-  gap: 8px;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  font-size: 15px;
-}
-
-.arrow-btn.back {
+.arrow-btn.home {
   --translate-direction: -1;
-  left: 4vh
-}
-
-.arrow-btn.next {
-  right: 4vh;
-  --translate-direction: 1;
-  flex-direction: row-reverse;
-}
-
-.arrow-btn img {
-  transition: transform 0.2s ease;
-}
-
-.arrow-btn:hover img {
-  transform: translateX(calc(100% * (.1 * var(--translate-direction))));
-  pointer-events: none;
+  padding-right: 10px;
+  display: none;
+  position: fixed;
+  top: 134px;
+  left: 3vh;
 }
 
 .project-page .title {
@@ -145,6 +119,68 @@
   width: 100%;
 }
 
+.project-navigator {
+  --container-border-radius: 8px;
+  position: fixed;
+  right: 4vh;
+  bottom: 4vh;
+  display: flex;
+  max-height: fit-content;
+  max-width: 240px;
+}
+
+.project-navigator .fixed-container {
+  border-radius: var(--container-border-radius);
+  display: flex;
+  width: 240px;
+  min-height: 100px;
+  align-self: center;
+  background-color: var(--color-black);
+  justify-content: center;
+  position: relative;
+}
+
+.project-navigator .nav-btns {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  padding-bottom: 32px;
+  width: 50%;
+}
+
+.project-navigator .hover-text {
+  bottom: 10px;
+  left: 10px;
+  text-transform: capitalize;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  text-wrap: nowrap;
+  padding-left: 8px;
+  padding-top: 12px;
+}
+
+.project-navigator .thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: var(--container-border-radius);
+  background-color: var(--color-black);
+}
+
+.project-navigator .thumbnail-wrapper {
+  position: relative;
+}
+
+.project-navigator .thumbnail-wrapper::after {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 24px;
+  background-color: var(--color-black);
+  content: "";
+  width: 100%;
+}
+
 @media screen and (min-width: 1280px) {
   .built-with {
     align-self: flex-end;
@@ -153,8 +189,15 @@
 }
 
 @media screen and (min-width: 1528px) {
-  .arrow-btn {
+  .arrow-btn.home {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .arrow-btn.home {
+    left: 4vh;
+    gap: 8px;
   }
 }
 

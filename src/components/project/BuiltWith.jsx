@@ -8,8 +8,8 @@ export const BuiltWith = ({ tools }) => {
           <span className="title vertical-text">Built with:</span>
           <div className="tools">
               {tools.map(({ name, LogoComponent }, i) => (
-                <SlideUpAnimation order={i + 1} offsetY={30}>
-                  <span className="logo" key={name}>
+                <SlideUpAnimation order={i + 1} offsetY={30} key={name}>
+                  <span className="logo">
                     <LogoComponent />
                   </span>
                 </SlideUpAnimation>

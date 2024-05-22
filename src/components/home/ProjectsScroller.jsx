@@ -15,7 +15,7 @@ export const ProjectsScroller = ({
       </button>
       <div className="scroll-position">
         {Array.from({ length: numProjects }).map((_, i) => (
-          <button onClick={() => moveToIdx(i)}>
+          <button onClick={() => moveToIdx(i)} key={i}>
             <span
               className={`scroll-indicator${
                 Math.abs(currentSlide) === i ? " active" : ""
