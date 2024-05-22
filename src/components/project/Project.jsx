@@ -6,7 +6,6 @@ import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { ArrowButton } from "../common/ArrowButton";
 import { ProjectsNavigator } from "./ProjectsNavigator";
-import { projects } from "../../data/projects-data";
 
 export const Project = () => {
   const project = useLoaderData();
