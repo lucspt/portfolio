@@ -1,24 +1,25 @@
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { Header } from "../common/Header";
 import "./Project.css";
 import { GithubLink } from "../common/GithubLink";
 import backArrow from "../../vectors/arrow-back.svg";
+import nextArrow from "../../vectors/arrow-forward.svg";
 import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
+import { ArrowButton } from "./ArrowButton";
 
 export const Project = () => {
   const project = useLoaderData();
   const nav = useNavigate();
-  const location = useLocation();
 
   return (
     <div className="project-page">
-      {location.key !== "default" && (
-        <button className="back" onClick={() => nav(-1)}>
-          <img src={backArrow} />
-          <span>Back</span>
-        </button>
-      )}
+      <ArrowButton
+        onClick={() => nav(-1)}
+        text="Back"
+        className="back"
+        arrowImageSrc={backArrow}
+      />
       <section className="project-info">
         <div className="container-grid padded-container">
           <SlideUpAnimation>
@@ -43,9 +44,9 @@ export const Project = () => {
             <span
               className="image fade-in"
               key={src}
-              style={{ 
+              style={{
                 "--fade-in-duration": "0.3s",
-                "--fade-in-delay": "0.1s"
+                "--fade-in-delay": "0.1s",
               }}
             >
               <img src={src} alt={alt} />
@@ -53,6 +54,14 @@ export const Project = () => {
           ))}
         </div>
       </section>
+      {project.nextProjectId && (
+        <ArrowButton
+          text="Next"
+          className="next"
+          onClick={() => nav(`/project/${project.nextProjectId}`)}
+          arrowImageSrc={nextArrow}
+        />
+      )}
     </div>
   );
 };

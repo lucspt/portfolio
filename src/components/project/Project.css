@@ -13,13 +13,13 @@
   --container-padding: 32px
 }
 
-.back {
+.arrow-btn {
   display: none;
   border-radius: 50%;
-  width: fit-content;
+  width: max-content;
   position: fixed;
   padding: 0px;
-  left: 2vw;
+  top: 134px;
   color: var(--color-white);
   gap: 8px;
   align-items: center;
@@ -28,12 +28,23 @@
   font-size: 15px;
 }
 
-.back img {
+.arrow-btn.back {
+  --translate-direction: -1;
+  left: 4vh
+}
+
+.arrow-btn.next {
+  right: 4vh;
+  --translate-direction: 1;
+  flex-direction: row-reverse;
+}
+
+.arrow-btn img {
   transition: transform 0.2s ease;
 }
 
-.back:hover img {
-  transform: translateX(calc(100% * -.1));
+.arrow-btn:hover img {
+  transform: translateX(calc(100% * (.1 * var(--translate-direction))));
   pointer-events: none;
 }
 
@@ -142,7 +153,7 @@
 }
 
 @media screen and (min-width: 1528px) {
-  .back {
+  .arrow-btn {
     display: flex;
   }
 }
