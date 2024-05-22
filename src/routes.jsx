@@ -1,7 +1,6 @@
 import App from "./App";
 import { About } from "./components/about/About";
 import { Home } from "./components/home/Home";
-import { homeProjectsListLoader } from "./components/home/loader";
 import { Project } from "./components/project/Project";
 import { projectLoader } from "./components/project/loader";
 
@@ -10,7 +9,7 @@ export const routes = [
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Home />, loader: homeProjectsListLoader },
+      { index: true, element: <Home /> },
       {
         path: "/about",
         element: <About />

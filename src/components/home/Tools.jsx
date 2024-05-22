@@ -6,9 +6,7 @@ import { TypeScriptLogo } from "../common/TypeScriptLogo";
 import { CSSLogo } from "../common/CSSLogo";
 import { MongoDBLogo } from "../common/MongoDBLogo";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
-import { useElementInViewport } from "../../hooks/useElementInViewport";
 import { useRef } from "react";
-import { useLocation } from "react-router-dom";
 
 export const Tools = ({}) => {
   const visibilityRef = useRef();
