@@ -2,7 +2,7 @@ import { ArrowButton } from "../common/ArrowButton";
 import { projects } from "../../data/projects-data";
 import { useState } from "react";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
   const nextProject = nextProjectIdx !== null ? projects[nextProjectIdx] : null;
@@ -36,7 +36,9 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
               style={{ opacity: previousProject ? 1 : 0.1 }}
               onMouseEnter={(e) => onHover(e, previousProject?.thumbnail)}
               onMouseLeave={() => setThumbnailImage(null)}
-              onClick={() => nav(`/project/${previousProject?.id}`)}
+              onClick={() =>
+                nav(`/project/${previousProject?.id}`, { replace: true })
+              }
             />
             <ArrowButton
               hoverText={nextProject?.name}
@@ -44,7 +46,9 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
               style={{ opacity: nextProject ? 1 : 0.1 }}
               onMouseEnter={(e) => onHover(e, nextProject?.thumbnail)}
               onMouseLeave={() => setThumbnailImage(null)}
-              onClick={() => nav(`/project/${nextProject?.id}`)}
+              onClick={() =>
+                nav(`/project/${nextProject?.id}`, { replace: true })
+              }
             />
           </div>
         </div>
