@@ -17,10 +17,6 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
 
   const nav = useNavigate();
 
-  const onClick = useCallback((projectId) => {
-    nav(`/project/${projectId}`);
-  }, []);
-
   return (
     <nav className="project-navigator">
       <div className="grid">
