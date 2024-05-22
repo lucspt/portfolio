@@ -5,20 +5,16 @@ import { GithubLink } from "../common/GithubLink";
 import { BuiltWith } from "./BuiltWith";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { ProjectsNavigator } from "./ProjectsNavigator";
-import { useRef } from "react";
-import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Project = () => {
   const project = useLoaderData();
   const location = useLocation();
-  const containerRef = useRef();
-  useScrollToTop(containerRef);
 
   return (
-    <div className="project-page" ref={containerRef}>
+    <div className="project-page">
       <section className="project-info">
         <div className="container-grid padded-container">
-          <SlideUpAnimation>
+          <SlideUpAnimation onlyAnimateOnce>
             <div className="title">
               <Header text={project.name} className="project-name" />
               <GithubLink to={project.url} />
@@ -26,7 +22,7 @@ export const Project = () => {
           </SlideUpAnimation>
           <div className="info-content">
             <div className="description">
-              <SlideUpAnimation>
+              <SlideUpAnimation onlyAnimateOnce>
                 <p>{project.description}</p>
               </SlideUpAnimation>
             </div>

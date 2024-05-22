@@ -5,10 +5,8 @@ import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";
 import { Tools } from "./Tools";
-import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Home = () => {
-  useScrollToTop();
 
   return (
     <div className="home">
