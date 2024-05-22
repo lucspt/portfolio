@@ -12,43 +12,25 @@ import { useLocation } from "react-router-dom";
 
 export const Tools = ({}) => {
   const visibilityRef = useRef();
-  const alreadyAnimated = useRef(false);
-  const location = useLocation();
 
-  const isVisible = useElementInViewport(visibilityRef, ([e]) => {
-    const { isIntersecting } = e;
-    if (isIntersecting) {
-      alreadyAnimated.current = true;
-    }
-    return isIntersecting;
-  });
+  const logos = [
+    PythonLogo,
+    JavaScriptLogo,
+    ReactLogo,
+    TypeScriptLogo,
+    CSSLogo,
+    MongoDBLogo,
+  ];
 
   return (
     <FullWidthSection className="tools" title="Tools">
       <div ref={visibilityRef} />
       <div className="logos">
-      {(isVisible || alreadyAnimated.current) && (
-        <>
-          <SlideUpAnimation order={1}>
-            <PythonLogo />
+        {logos.map((LogoComponent, i) => (
+          <SlideUpAnimation order={i + 1} key={i} onlyAnimateOnce>
+            <LogoComponent />
           </SlideUpAnimation>
-          <SlideUpAnimation order={2}>
-            <JavaScriptLogo />
-          </SlideUpAnimation>
-          <SlideUpAnimation order={3}>
-            <ReactLogo />
-          </SlideUpAnimation>
-          <SlideUpAnimation order={4}>
-            <TypeScriptLogo />
-          </SlideUpAnimation>
-          <SlideUpAnimation order={5}>
-            <CSSLogo />
-          </SlideUpAnimation>
-          <SlideUpAnimation order={6}>
-            <MongoDBLogo />
-          </SlideUpAnimation>
-        </>
-      )}
+        ))}
       </div>
     </FullWidthSection>
   );

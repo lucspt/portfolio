@@ -1,7 +1,6 @@
 import "./Home.css";
 import { InteractiveText } from "../common/InteractiveText";
 import { MediaLinksFooter } from "../common/MediaLinksFooter";
-import { useRef } from "react";
 import { Projects } from "./Projects";
 import { FullWidthSection } from "./FullWidthSection";
 import { BorderContainedSection } from "./BorderContainedSection";

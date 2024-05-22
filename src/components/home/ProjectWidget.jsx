@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 
-export function ProjectWidget({ id, name, imageSrc, slideIndex }) {
+export function ProjectWidget({ id, name, imageSrc, slideIndex, visibilityRef }) {
   const nav = useNavigate();
 
   return (
-    <SlideUpAnimation order={slideIndex}>
+    <SlideUpAnimation order={slideIndex} visibilityRef={visibilityRef}>
       <div
         className="project"
         role="button"
