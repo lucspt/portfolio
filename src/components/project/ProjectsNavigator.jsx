@@ -9,7 +9,6 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
   const previousProject =
     previousProjectIdx !== null ? projects[previousProjectIdx] : null;
   const [thumbnailImage, setThumbnailImage] = useState(null);
-  const location = useLocation();
   const onHover = (e, imgSrc) => {
     e.stopPropagation();
     setThumbnailImage(imgSrc);
