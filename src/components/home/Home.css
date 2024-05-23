@@ -209,6 +209,10 @@ section > div:has( .title-upright ) {
   flex-direction: column;
 }
 
+.project .widget p {
+  text-transform: capitalize;
+}
+
 .tools .logos {
   --tools-img-height: 40px;
   --tools-padding-top: 10px;
