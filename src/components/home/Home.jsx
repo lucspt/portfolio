@@ -2,7 +2,7 @@ import "./Home.css";
 import { InteractiveText } from "../common/InteractiveText";
 import { MediaLinksFooter } from "../common/MediaLinksFooter";
 import { Projects } from "./Projects";
-import { FullWidthSection } from "./FullWidthSection";
+import { NoBorderSection } from "./NoBorderSection";
 import { BorderContainedSection } from "./BorderContainedSection";
 import { Tools } from "./Tools";
 
@@ -19,14 +19,14 @@ export const Home = () => {
           block
         />
       </BorderContainedSection>
-      <FullWidthSection className="cliffhanger">
+      <NoBorderSection className="cliffhanger">
         <h2>
           <span>
             I'm a software engineer who likes turning ideas into reality,
             especially to help the world. I also love the environment.
           </span>
         </h2>
-      </FullWidthSection>
+      </NoBorderSection>
       <Projects />
       <Tools />
       <MediaLinksFooter />

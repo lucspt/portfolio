@@ -1,7 +1,7 @@
 import { JavaScriptLogo } from "../common/JavaScriptLogo";
 import { PythonLogo } from "../common/PythonLogo";
 import { ReactLogo } from "../common/ReactLogo";
-import { FullWidthSection } from "./FullWidthSection";
+import { NoBorderSection } from "./NoBorderSection";
 import { TypeScriptLogo } from "../common/TypeScriptLogo";
 import { CSSLogo } from "../common/CSSLogo";
 import { MongoDBLogo } from "../common/MongoDBLogo";
@@ -21,7 +21,7 @@ export const Tools = ({}) => {
   ];
 
   return (
-    <FullWidthSection className="tools" title="Tools">
+    <NoBorderSection className="tools" title="Tools">
       <div ref={visibilityRef} />
       <div className="logos">
         {logos.map((LogoComponent, i) => (
@@ -30,6 +30,6 @@ export const Tools = ({}) => {
           </SlideUpAnimation>
         ))}
       </div>
-    </FullWidthSection>
+    </NoBorderSection>
   );
 };

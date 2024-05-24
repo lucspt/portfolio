@@ -1,6 +1,6 @@
 
 
-export const FullWidthSection = ({ className="", title, containWidth, bordered=true, children }) => {
+export const NoBorderSection = ({ className="", title, bordered=true, children }) => {
 
   return (
     <section className={`section-full-width ${className}${bordered ? " bordered" : ""}`}>
