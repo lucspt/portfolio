@@ -1,4 +1,4 @@
-import App from "./App";
+import { App } from "./App";
 import { About } from "./components/about/About";
 import { Home } from "./components/home/Home";
 import { Project } from "./components/project/Project";

@@ -11,6 +11,4 @@ export function App() {
       <ScrollRestoration />
     </div>
   );
-}
-
-export default App;
+};
