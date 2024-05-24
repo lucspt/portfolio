@@ -1,4 +1,4 @@
-export const BorderContainedSection = ({
+export const BorderedSection = ({
   className = "",
   sectionTitle,
   padded = true,

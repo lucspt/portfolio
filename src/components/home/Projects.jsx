@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { ProjectWidget } from "./ProjectWidget";
-import { BorderContainedSection } from "./BorderContainedSection";
+import { BorderedSection } from "./BorderedSection";
 import { projects } from "../../data/projects-data";
 import { ProjectsScroller } from "./ProjectsScroller";
 import { useKeenSlider } from "keen-slider/react";
@@ -33,7 +33,7 @@ export const Projects = () => {
   });
 
   return (
-    <BorderContainedSection
+    <BorderedSection
       className="projects-section"
       sectionTitle="Projects"
       padded={false}
@@ -70,6 +70,6 @@ export const Projects = () => {
         prev={() => instanceRef.current.prev()}
         moveToIdx={(idx) => instanceRef.current.moveToIdx(idx)}
       />
-    </BorderContainedSection>
+    </BorderedSection>
   );
 };

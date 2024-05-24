@@ -3,14 +3,14 @@ import { InteractiveText } from "../common/InteractiveText";
 import { MediaLinksFooter } from "../common/MediaLinksFooter";
 import { Projects } from "./Projects";
 import { NoBorderSection } from "./NoBorderSection";
-import { BorderContainedSection } from "./BorderContainedSection";
+import { BorderedSection } from "./BorderedSection";
 import { Tools } from "./Tools";
 
 export const Home = () => {
 
   return (
     <div className="home">
-      <BorderContainedSection className="intro home-section" borderTop={false}>
+      <BorderedSection className="intro home-section" borderTop={false}>
         <span>Hi, </span>
         <InteractiveText text="I'm Luca Caputo" order={1} />
         <InteractiveText
@@ -18,7 +18,7 @@ export const Home = () => {
           order={2}
           block
         />
-      </BorderContainedSection>
+      </BorderedSection>
       <NoBorderSection className="cliffhanger">
         <h2>
           <span>
