@@ -216,17 +216,12 @@ section > div:has( .title-upright ) {
 .tools .logos {
   --tools-img-height: 40px;
   --tools-padding-top: 10px;
-  --tools-padding-bottom: 24px;
   margin: 0 auto;
   padding-bottom: var(--tools-padding-bottom);
   padding-top: var(--tools-padding-top);
   display: flex;
   justify-content: space-evenly;
-  min-height: calc(
-    var(--tools-img-height) 
-    + var(--tools-padding-top) 
-    + var(--tools-padding-bottom)
-  );
+  min-height: calc(var(--tools-img-height) + var(--tools-padding-top) + 24px);
 }
 
 .tools .logos > div {
@@ -287,6 +282,12 @@ section > div:has( .title-upright ) {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .media-links .content {
+    padding-block: 10px;
+  }
 }
 
 @media screen and (min-width: 1017px) {
