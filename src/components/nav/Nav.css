@@ -40,6 +40,14 @@
   outline: none;
 }
 
-.link-container a {
-  pointer-events: all;
+.nav-btn {
+  color: var(--color-white);
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+span.nav-link {
+  cursor: default;
 }
