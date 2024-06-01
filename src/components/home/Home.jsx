@@ -10,7 +10,7 @@ export const Home = () => {
 
   return (
     <div className="home">
-      <BorderedSection className="intro home-section" borderTop={false}>
+      <BorderedSection className="intro home-section">
         <span>Hi, </span>
         <InteractiveText text="I'm Luca Caputo" order={1} />
         <InteractiveText
