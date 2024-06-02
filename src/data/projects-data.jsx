@@ -74,7 +74,7 @@ export const projects = [
         LogoComponent: () => <JavaScriptLogo />,
       },
     ],
-    description: `Sprive mobile is an IOS & Android React Native application that allows users to track their carbon footprint, and helps them to reduce it. 
+    description: `Sprive mobile is an IOS & Android application, built with React Native, that allows one to track and reduce their carbon footprint. 
       Users can see the environmental impact of certain products, and record the emissions of the ones that they purchase. They can 
       also set pledges, which are personal goals to help them lower their footprint.`,
     images: [
