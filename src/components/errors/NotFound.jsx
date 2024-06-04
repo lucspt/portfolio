@@ -10,9 +10,7 @@ export const NotFound = () => {
     <div className="error-page">
       <div className="not-found">
         <p className="error-message">{ error.statusText || error.message }</p>
-        <InteractiveLink to="/" replace={true}>
-          Back Home
-        </InteractiveLink>
+        <InteractiveLink to="/" replace={true} text="Back Home" />
       </div>
     </div>
   )

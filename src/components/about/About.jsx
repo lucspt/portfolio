@@ -21,9 +21,12 @@ export const About = () => {
               that I am calmy confident, intriguingly innovative and kindly outgoing, though I think it would 
               be even better to
             </p>
-            <InteractiveLink className="prove-it-link">
-              <a href="mailto:lucacaputodev@gmail.com" className="prove-it">Prove it</a> 
-            </InteractiveLink>
+            <InteractiveLink 
+              className="prove-it-link" 
+              to="mailto:lucacaputodev@gmail.com"
+              text="Prove it"
+              external={true}
+            />
           </div>
         </div>
       </header>

@@ -1,13 +1,26 @@
+import { Link } from "react-router-dom";
+import "./InteractiveLink.css";
 
-import { Link } from 'react-router-dom';
-import './InteractiveLink.css';
+export const InteractiveLink = ({
+  className = "",
+  to,
+  text,
+  external,
+  children,
+  ...props
+}) => {
 
-export const InteractiveLink = ({ className="", to, children, ...props }) => {
+  const className_ = `interactive-link ${className}`;
 
-
-  return (
-    <Link className={`interactive-link ${className} `} to={to} {...props}>
-      { children }
+  return external ? (
+    <a className={className_} href={to} {...props}>
+      <span>{text}</span>
+      {children}
+    </a>
+  ) : (
+    <Link className={className_} to={to} {...props}>
+      <span>{text}</span>
+      {children}
     </Link>
-  )
-}
+  );
+};

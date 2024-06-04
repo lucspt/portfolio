@@ -51,7 +51,6 @@ header span.about {
 
 .desc-container .prove-it-link {
   padding: 0px;
-  display: block;
   width: 100%;
   margin-top: 32px;
   position: relative;
@@ -87,7 +86,6 @@ header span.about {
 
   .desc-container .prove-it-link {
     width: 120px;
-    display: inline-block;
   }
 
   .desc-container p {
