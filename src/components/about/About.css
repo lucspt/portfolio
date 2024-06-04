@@ -50,24 +50,14 @@ header span.about {
 }
 
 .desc-container .prove-it-button {
-  background-color: var(--color-black);
   padding: 0px;
   display: block;
   width: 100%;
-  border-radius: 3px;
   margin-top: 32px;
   position: relative;
   height: 35px;
   color: var(--color-white);
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.prove-it-button:hover {
-  border-radius: 0px;
-  transform: translateX(2px);
-  background-color: rgba(0, 0, 0, 0.3gi);
-
 }
 
 .about .footer {

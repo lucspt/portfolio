@@ -14,6 +14,6 @@
 .default-btn:hover {
   border-radius: 0px;
   transform: translateX(2px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
