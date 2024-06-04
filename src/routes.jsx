@@ -15,7 +15,7 @@ export const routes = [
         element: <About />
       },
       {
-        path: "project/:projectId",
+        path: "projects/:projectId",
         loader: projectLoader,
         element: <Project />
 

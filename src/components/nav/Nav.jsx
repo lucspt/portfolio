@@ -2,6 +2,7 @@ import "./Nav.css";
 import { DynamicNavLink } from "./DynamicNavLink";
 
 export const Nav = () => {
+
   return (
     <nav className="nav-main">
       <div className="borders" />

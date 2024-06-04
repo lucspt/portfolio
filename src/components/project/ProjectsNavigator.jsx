@@ -36,7 +36,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
               onMouseEnter={(e) => onHover(e, previousProject?.thumbnail)}
               onMouseLeave={() => setThumbnailImage(null)}
               onClick={() =>
-                nav(`/project/${previousProject?.id}`, { replace: true })
+                nav(`/projects/${previousProject?.id}`, { replace: true })
               }
             />
             <ArrowButton
@@ -46,7 +46,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
               onMouseEnter={(e) => onHover(e, nextProject?.thumbnail)}
               onMouseLeave={() => setThumbnailImage(null)}
               onClick={() =>
-                nav(`/project/${nextProject?.id}`, { replace: true })
+                nav(`/projects/${nextProject?.id}`, { replace: true })
               }
             />
           </div>

@@ -9,7 +9,7 @@ export function ProjectWidget({ id, name, imageSrc, slideIndex, visibilityRef })
       <div
         className="project"
         role="button"
-        onClick={() => nav(`/project/${id}`)}
+        onClick={() => nav(`/projects/${id}`)}
       >
         <div className="widget">
           <div className="image hover-lift">
