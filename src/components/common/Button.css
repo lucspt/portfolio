@@ -4,14 +4,17 @@
   border-radius: 3px;
   color: var(--color-white);
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: 
+    opacity 0.2s ease, 
+    transform 0.2s ease, 
+    background-color 0.2s ease-in-out;
   padding: 11px 20px;
 }
 
 .default-btn:hover {
   border-radius: 0px;
   transform: translateX(2px);
-  background-color: rgba(0, 0, 0, 0.3gi);
+  background-color: rgba(0, 0, 0, 0.5);
 
 }
 
