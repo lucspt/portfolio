@@ -1,0 +1,24 @@
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.not-found .error-message {
+  font-size: 30px;
+}
+
+.not-found a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  font-size: 15px;
+}
