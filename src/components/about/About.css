@@ -49,7 +49,7 @@ header span.about {
   justify-content: center;
 }
 
-.desc-container .prove-it-button {
+.desc-container .prove-it-link {
   padding: 0px;
   display: block;
   width: 100%;
@@ -85,7 +85,7 @@ header span.about {
     text-align: unset;
   }
 
-  .desc-container .prove-it-button {
+  .desc-container .prove-it-link {
     width: 120px;
     display: inline-block;
   }

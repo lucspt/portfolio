@@ -1,6 +1,6 @@
-import { Link, useRouteError } from "react-router-dom"
-import { Button } from "../common/Button";
+import { useRouteError } from "react-router-dom"
 import "./NotFound.css";
+import { InteractiveLink } from "../common/InteractiveLink";
 
 
 export const NotFound = () => {
@@ -10,9 +10,9 @@ export const NotFound = () => {
     <div className="error-page">
       <div className="not-found">
         <p className="error-message">{ error.statusText || error.message }</p>
-        <Link to="/" replace={true}>
+        <InteractiveLink to="/" replace={true}>
           Back Home
-        </Link>
+        </InteractiveLink>
       </div>
     </div>
   )
