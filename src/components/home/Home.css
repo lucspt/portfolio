@@ -382,3 +382,19 @@ section .title-upright {
     }
 
   }
+
+  @media screen and (min-height: 1051px) {
+    
+    .home-section.intro {
+      height: 900px;
+    }
+
+    .projects-section {
+      padding-bottom: 72px;
+    }
+
+    .projects-section .border-container {
+      padding-bottom: 24px;
+    }
+    
+  }
