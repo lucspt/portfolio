@@ -7,7 +7,7 @@
 
 
 .home-section.intro {
-  height: 750px;
+  height: 620px;
 }
 
 .home-section.intro::before {
@@ -381,6 +381,12 @@ section .title-upright {
       rotate(-180deg);
     }
 
+  }
+
+  @media screen and (min-height: 870px) {
+    .home-section.intro {
+      height: 750px;
+    }
   }
 
   @media screen and (min-height: 1051px) {

@@ -42,7 +42,12 @@ export const Projects = () => {
         className="full-space min-height-contain"
         style={{ minHeight: "inherit" }}
       >
-        <span ref={visibilityRef} style={{ top: "100px", position: "absolute" }} />
+        <span 
+        ref={visibilityRef} 
+        style={{ 
+          top: "100px", position: "absolute", height: "100%", width: "100%"
+        }} 
+          />
         <div className="projects keen-slider" ref={sliderRef}>
           {projects.map((p, i) => (
             <div
