@@ -56,6 +56,27 @@ header span.about {
   cursor: pointer;
 }
 
+.interactive-link {
+  background-color: hsla(0, 0%, 93%, 1);
+  border-radius: 3px;
+  color: var(--color-black);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 
+    transform 0.2s ease, 
+    opacity 0.2s ease-in-out,
+    border-radius 0.17s ease;
+  padding: 11px 20px;
+}
+
+.interactive-link:hover {
+  border-radius: 0px;
+  transform: translateX(2px);
+  opacity: 0.8;
+}
+
 .about .footer {
   position: fixed;
   border-top: solid 1px var(--color-black);
