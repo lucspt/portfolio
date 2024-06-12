@@ -55,29 +55,7 @@ header span.about {
   margin-top: 32px;
   position: relative;
   height: 35px;
-  color: var(--color-white);
   cursor: pointer;
-}
-
-.interactive-link {
-  background-color: var(--color-black);
-  border-radius: 3px;
-  color: var(--color-white);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 
-    transform 0.2s ease, 
-    background-color 0.2s ease-in-out,
-    border-radius 0.17s ease;
-  padding: 11px 20px;
-}
-
-.interactive-link:hover {
-  border-radius: 0px;
-  transform: translateX(2px);
-  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .about .footer {
