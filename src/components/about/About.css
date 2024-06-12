@@ -29,11 +29,9 @@ header span.about {
 .desc-container p {
   font-size: var(--desc-font-size);
   text-wrap: balance;
-  text-wrap: wrap;
   width: 100%;
   margin: 0;
   line-height: 2;
-  margin-block-start: 32px;
 }
 
 .desc-container .prove-it {
@@ -64,7 +62,7 @@ header span.about {
   bottom: 0;
 }
 
-@media screen and (min-width: 410px) {
+@media screen and (min-width: 423px) {
     .desc-container {
       --desc-font-size: 16px;
     }
@@ -90,6 +88,7 @@ header span.about {
   .desc-container p {
     line-height: 1.7;
     margin-bottom: 0;
+    margin-top: 32px;
   }
 
 }
