@@ -5,7 +5,7 @@ export function ProjectWidget({ id, name, imageSrc, slideIndex, visibilityRef })
   const nav = useNavigate();
 
   return (
-    <SlideUpAnimation order={slideIndex} visibilityRef={visibilityRef}>
+    <SlideUpAnimation order={slideIndex} visibilityRef={visibilityRef} onlyAnimateOnce={true}>
       <div
         className="project"
         role="button"

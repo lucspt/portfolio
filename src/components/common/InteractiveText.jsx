@@ -24,7 +24,6 @@ export const InteractiveText = ({
   
   }, [typed, onAnimationEnd]);
 
-
   return text && (
     <p
       className={`interactive-text${onlyAnimateOnce && typed ? "" : " write-text"}`}
@@ -37,6 +36,7 @@ export const InteractiveText = ({
       onAnimationEnd={() => {
         alreadyTyped = true;
         setTyped(true);
+        setShowCursor(false);
       }}
     >
       { text }

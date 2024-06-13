@@ -3,11 +3,12 @@
   text-overflow: clip;
   white-space: nowrap;
   max-width: fit-content;
+  position: relative;
 }
 
 .write-text {
   width: 0%;
-  animation: writeText 2s steps(44) 1s forwards
+  animation: writeText 2s steps(44) 1s forwards;
 }
 
 @keyframes writeText {
