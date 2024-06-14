@@ -16,9 +16,9 @@ export const About = () => {
               my name is Luca. 
               I'm recognized by many as one of the best coders in the world. 
               Lol, just kidding. 
-              Actually, I'm an ever aspiring learner, and I like to code because of the way it engages my mind.
+              Actually, I'm an ever-aspiring learner, and I like to code because of the way it engages my mind.
               The idea of impact always catches my attention, and usually excites me profoundly. I could say 
-              that I am calmy confident, intriguingly innovative and kindly outgoing, though I think it would 
+              that I am calmy confident, intriguingly innovative, and kindly outgoing, though I think it would 
               be even better to
             </p>
             <InteractiveLink 
