@@ -59,9 +59,3 @@
     --animation-duration: 2.25s;
   }
 }
-
-@media screen and (min-width: 1400px) {
-  .write-text {
-    --animation-duration: 2.35s;
-  }
-}
