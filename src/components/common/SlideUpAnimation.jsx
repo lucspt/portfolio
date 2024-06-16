@@ -9,6 +9,7 @@ export const SlideUpAnimation = ({
   offsetY = 50,
   visibilityRef,
   onlyAnimateOnce,
+  delay=0,
   className,
   children,
 }) => {
@@ -24,7 +25,7 @@ export const SlideUpAnimation = ({
       className={`slide-up ${className}`}
       ref={ref}
       style={{
-        transitionDelay: `${order * animDelay}s`,
+        transitionDelay: `${delay + (order * animDelay)}s`,
         transform: `translateY(${isVisible || dontAnimate ? 0 : offsetY}px)`,
         opacity: Number(dontAnimate ? 1 : isVisible),
       }}

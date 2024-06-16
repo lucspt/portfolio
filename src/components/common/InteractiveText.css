@@ -9,7 +9,7 @@
 }
 
 .write-text {
-  --animation-duration: .9s;
+  --animation-duration: .8s;
   width: 0%;
   animation: writeText var(--animation-duration) steps(44) 1s forwards;
   animation-duration: var(--animation-duration);
@@ -22,6 +22,12 @@
     } 100% {
       width: 100%;
     }
+}
+
+@media screen and (min-width: 415px) {
+  .write-text {
+    --animation-duration: .9s;
+  }
 }
 
 @media screen and (min-width: 600px) {
