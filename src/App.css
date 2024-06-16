@@ -105,6 +105,10 @@ input, button, a {
   cursor: pointer;
 } 
 
+.footer {
+  background-color: var(--color-background);
+}
+
 @keyframes fadeIn {
   to { opacity: var(--fade-in-opacity, 1); }
 };

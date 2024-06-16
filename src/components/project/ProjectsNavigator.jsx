@@ -4,24 +4,30 @@ import { useState } from "react";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { useNavigate } from "react-router-dom";
 
+const imageAndTextMinWidth = 800;
 export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx, slideUpOrder }) => {
   const nextProject = nextProjectIdx !== null ? projects[nextProjectIdx] : null;
   const previousProject =
     previousProjectIdx !== null ? projects[previousProjectIdx] : null;
   const [thumbnailImage, setThumbnailImage] = useState(null);
+
+  const showImageOnHover = window.innerWidth >= imageAndTextMinWidth,
+  showHoverText = showImageOnHover;
+
   const onHover = (e, imgSrc) => {
     e.stopPropagation();
-    setThumbnailImage(imgSrc);
+    if (showImageOnHover) {
+      setThumbnailImage(imgSrc);
+    };
   };
 
   const nav = useNavigate();
 
   return (
     <nav className="project-navigator">
-      <SlideUpAnimation>
       <div className="grid">
         {thumbnailImage && (
-          <SlideUpAnimation>
+          <SlideUpAnimation key={thumbnailImage}>
             <div className="thumbnail-wrapper">
               <img src={thumbnailImage} className="thumbnail" />
             </div>
@@ -31,7 +37,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx, slideUpO
           <div className="nav-btns">
             <ArrowButton
               back
-              hoverText={previousProject?.name}
+              hoverText={showHoverText ? previousProject?.name : ""}
               disabled={!previousProject}
               style={{ opacity: previousProject ? 1 : 0.1 }}
               onMouseEnter={(e) => onHover(e, previousProject?.thumbnail)}
@@ -41,7 +47,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx, slideUpO
               }
             />
             <ArrowButton
-              hoverText={nextProject?.name}
+              hoverText={showHoverText ? nextProject?.name : ""}
               disabled={!nextProject}
               style={{ opacity: nextProject ? 1 : 0.1 }}
               onMouseEnter={(e) => onHover(e, nextProject?.thumbnail)}
@@ -53,7 +59,6 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx, slideUpO
           </div>
         </div>
       </div>
-      </SlideUpAnimation>
     </nav>
   );
 };

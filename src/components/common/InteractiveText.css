@@ -9,7 +9,7 @@
 }
 
 .write-text {
-  --animation-duration: .8s;
+  --animation-duration: .5s;
   width: 0%;
   animation: writeText var(--animation-duration) steps(44) 1s forwards;
   animation-duration: var(--animation-duration);
@@ -22,6 +22,12 @@
     } 100% {
       width: 100%;
     }
+}
+
+@media screen and (min-width: 320px) {
+  .write-text {
+    --animation-duration: .8s;
+  }
 }
 
 @media screen and (min-width: 415px) {
@@ -39,5 +45,23 @@
 @media screen and (min-width: 770px) {
   .write-text {
     --animation-duration: 2s;
+  }
+}
+
+@media screen and (min-width: 1090px) {
+  .write-text {
+    --animation-duration: 2.15s;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .write-text {
+    --animation-duration: 2.25s;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .write-text {
+    --animation-duration: 2.35s;
   }
 }

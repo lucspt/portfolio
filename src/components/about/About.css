@@ -1,3 +1,8 @@
+div.about {
+  overflow-y: scroll;
+  padding-bottom: 64px;
+}
+
 header.contained-width {
   padding: 0px 24px;
 }

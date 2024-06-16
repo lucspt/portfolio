@@ -124,11 +124,9 @@
 }
 
 .project-navigator {
-  --nav-max-width: 80vw;
   --container-border-radius: 8px;
   position: fixed;
-  left: 0;
-  right: 0;
+  right: 4vh;
   margin: auto;
   bottom: 4vh;
   display: flex;
@@ -151,7 +149,7 @@
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
-  width: 50%;
+  gap: 10px;
 }
 
 .project-navigator .hover-text {
@@ -185,6 +183,23 @@
   background-color: var(--color-black);
   content: "";
   width: 100%;
+}
+
+@media screen and (min-width: 390px) and (min-height: 670px) {
+  .project-navigator .nav-btns {
+    width: 50%;
+    gap: unset;
+  }
+
+  .project-navigator {
+    --nav-max-width: 80vw;
+    --container-border-radius: 8px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 800px) {

@@ -37,7 +37,7 @@ section > div:has( .title-upright ) {
 
 .border-section-wrapper {
   margin: 0 auto;
-  padding: 24px 12px;
+  padding-block: 24px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -311,6 +311,12 @@ section .title-upright {
   padding-left: 12px;
   padding-bottom: 12px;
   margin: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .border-section-wrapper {
+    padding-inline: 12px;
+  }
 }
 
 @media screen and (min-width: 900px) {
