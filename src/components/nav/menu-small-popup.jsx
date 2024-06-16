@@ -5,7 +5,7 @@ import { SlideUpAnimation } from "../common/SlideUpAnimation";
 export function MenuSmallPopup({ closeModal }) {
   return (
     <>
-      <div className="menu-small-backdrop fade-in"/>
+      <div className="menu-small-backdrop fade-in" onClick={closeModal}/>
       <div className="menu-small-overlay" onClick={closeModal}>
         <SlideUpAnimation>
           <div className="menu-small-wrapper">

@@ -9,6 +9,7 @@ export const SlideUpAnimation = ({
   offsetY = 50,
   visibilityRef,
   onlyAnimateOnce,
+  className,
   children,
 }) => {
   const [dontAnimate, setDontAnimate] = useState(false);
@@ -20,7 +21,7 @@ export const SlideUpAnimation = ({
 
   return (
     <div
-      className={"slide-up"}
+      className={`slide-up ${className}`}
       ref={ref}
       style={{
         transitionDelay: `${order * animDelay}s`,
