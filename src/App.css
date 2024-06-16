@@ -46,7 +46,7 @@ button {
   background-color: transparent;
 }
 
-body, html, #root {
+body, #root {
   margin: 0;
   padding: 0;
   background-color: var(--color-background);
