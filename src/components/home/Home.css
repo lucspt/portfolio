@@ -132,7 +132,6 @@ section > div:has( .title-upright ) {
 }
 
 .projects {
-  min-height: 490px;
   display: flex;
   align-items: center;
   position: relative;
@@ -171,11 +170,6 @@ section > div:has( .title-upright ) {
 
 .project:hover .bg {
   transform: scale(1.01);
-}
-
-.projects-section .min-height-contain {
-  min-height: calc(max(100%, 500px));
-  height: 500px;
 }
 
 .projects-section .border-section-wrapper {
@@ -333,7 +327,7 @@ section .title-upright {
     display: flex;
   }
 
-  .projects-section {
+  .projects-section, .projects {
     padding-bottom: 32px;
   }
 }
@@ -357,6 +351,10 @@ section .title-upright {
 
   .tools .logos {
     --tools-img-height: 55px;
+  }
+
+  .projects-section .min-height-contain {
+    min-height: calc(max(100%, 500px));
   }
 }
 
@@ -384,13 +382,9 @@ section .title-upright {
 
   }
 
-  @media screen and (min-height: 960px) {
+  @media screen and (min-height: 960px) and (min-width: 1200px) {
     .home-section.intro {
       height: 750px;
-    }
-
-    .projects-section {
-      padding-bottom: 64px;
     }
   }
 

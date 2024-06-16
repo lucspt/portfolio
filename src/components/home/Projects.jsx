@@ -12,6 +12,7 @@ export const Projects = () => {
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
       spacing: 20,
+      perView: 1.15,
     },
     loop: true,
     slideChanged(slider) {
@@ -20,9 +21,9 @@ export const Projects = () => {
     mode: "snap",
     breakpoints: {
       "(min-width: 400px)": {
-        slides: { perView: 1, spacing: 15 },
+        slides: { perView: 1.15, spacing: 25 },
       },
-      "(min-width: 600px)": {
+      "(min-width: 700px)": {
         slides: { perView: 1.25, spacing: 25 },
       },
       "(min-width: 920px)": {
