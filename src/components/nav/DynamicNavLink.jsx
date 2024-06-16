@@ -4,7 +4,7 @@ export const DynamicNavLink = ({ text, to, ...props }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className="nav-link-wrapper">
+    <div className="nav-link-wrapper" {...props}>
       {pathname === to ? (
         <span className="nav-link">{text}</span>
       ) : (
