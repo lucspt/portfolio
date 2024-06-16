@@ -17,6 +17,7 @@ export const Home = () => {
           text="Make yourself at home!"
           order={2}
           block
+          delay={window.innerWidth <= 770 ? .5 : 0}
         />
       </BorderedSection>
       <NoBorderSection className="cliffhanger">

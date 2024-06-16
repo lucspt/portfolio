@@ -1,3 +1,5 @@
+
+
 .interactive-text {
   overflow: hidden;
   text-overflow: clip;
@@ -7,8 +9,11 @@
 }
 
 .write-text {
+  --animation-duration: .9s;
   width: 0%;
-  animation: writeText 2s steps(44) 1s forwards;
+  animation: writeText var(--animation-duration) steps(44) 1s forwards;
+  animation-duration: var(--animation-duration);
+  animation-delay: calc(var(--delay) + calc(var(--animation-duration) * var(--order-index)));
 }
 
 @keyframes writeText {
@@ -17,4 +22,16 @@
     } 100% {
       width: 100%;
     }
+}
+
+@media screen and (min-width: 600px) {
+  .write-text {
+    --animation-duration: 1.25s;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .write-text {
+    --animation-duration: 2s;
+  }
 }

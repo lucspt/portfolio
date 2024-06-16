@@ -12,7 +12,6 @@ export const InteractiveText = ({
   ...props
 
  }) => {
-  const animationDuration = 2;
   const [ typed, setTyped ] = useState(alreadyTyped);
   
   const { onAnimationEnd, styles, ..._props } = props;
@@ -29,14 +28,13 @@ export const InteractiveText = ({
       className={`interactive-text${onlyAnimateOnce && typed ? "" : " write-text"}`}
       {..._props} 
       style={{ 
-        animationDuration: `${animationDuration}s`,
-        animationDelay: `${delay + (animationDuration * order - 1)}s`,
+        "--order-index": order - 1,
+        "--delay": `${1 + delay}s`,
         ...styles,
       }}
       onAnimationEnd={() => {
         alreadyTyped = true;
         setTyped(true);
-        setShowCursor(false);
       }}
     >
       { text }
