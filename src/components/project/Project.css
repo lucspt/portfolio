@@ -124,10 +124,12 @@
 }
 
 .project-navigator {
-  --nav-max-width: 200px;
+  --nav-max-width: 80vw;
   --container-border-radius: 8px;
   position: fixed;
-  right: 4vh;
+  left: 0;
+  right: 0;
+  margin: auto;
   bottom: 4vh;
   display: flex;
   max-height: fit-content;
@@ -138,10 +140,10 @@
   border-radius: var(--container-border-radius);
   display: flex;
   width: var(--nav-max-width);
-  min-height: 100px;
   align-self: center;
   background-color: var(--color-black);
   justify-content: center;
+  padding: 10px;
   position: relative;
 }
 
@@ -149,7 +151,6 @@
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
-  padding-bottom: 32px;
   width: 50%;
 }
 
@@ -186,6 +187,25 @@
   width: 100%;
 }
 
+@media screen and (min-width: 800px) {
+  .project-navigator .fixed-container {
+    min-height: 100px;
+    padding: 0px;
+  }
+  
+  .project-navigator .nav-btns {
+    padding-bottom: 32px;
+  }
+
+  .project-navigator {
+    --nav-max-width: 200px;
+    right: 4vh;
+    bottom: 4vh;
+    margin: 0;
+    left: unset;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .built-with {
     align-self: flex-end;
@@ -209,4 +229,5 @@
     gap: 8px;
   }
 }
+
 

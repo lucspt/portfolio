@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SlideUpAnimation } from "../common/SlideUpAnimation";
 import { useNavigate } from "react-router-dom";
 
-export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
+export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx, slideUpOrder }) => {
   const nextProject = nextProjectIdx !== null ? projects[nextProjectIdx] : null;
   const previousProject =
     previousProjectIdx !== null ? projects[previousProjectIdx] : null;
@@ -18,6 +18,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
 
   return (
     <nav className="project-navigator">
+      <SlideUpAnimation>
       <div className="grid">
         {thumbnailImage && (
           <SlideUpAnimation>
@@ -52,6 +53,7 @@ export const ProjectsNavigator = ({ nextProjectIdx, previousProjectIdx }) => {
           </div>
         </div>
       </div>
+      </SlideUpAnimation>
     </nav>
   );
 };
